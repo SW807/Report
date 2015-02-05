@@ -1,3 +1,7 @@
+## Main pdf
+main.pdf
+tmp*
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -9,7 +13,6 @@
 
 ## Intermediate documents:
 *.dvi
-*-converted-to.*
 # these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
@@ -21,7 +24,6 @@
 *.blg
 *-blx.aux
 *-blx.bib
-*.brf
 *.run.xml
 
 ## Build tool auxiliary files:
@@ -43,21 +45,6 @@
 *.nav
 *.snm
 *.vrb
-
-#(e)ledmac/(e)ledpar
-*.end
-*.[1-9]
-*.[1-9][0-9]
-*.[1-9][0-9][0-9]
-*.[1-9]R
-*.[1-9][0-9]R
-*.[1-9][0-9][0-9]R
-*.eledsec[1-9]
-*.eledsec[1-9]R
-*.eledsec[1-9][0-9]
-*.eledsec[1-9][0-9]R
-*.eledsec[1-9][0-9][0-9]
-*.eledsec[1-9][0-9][0-9]R
 
 # glossaries
 *.acn
@@ -86,9 +73,6 @@
 # minted
 *.pyg
 
-# morewrites
-*.mw
-
 # nomencl
 *.nlo
 
@@ -107,3 +91,4 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
+graphics/Thumbs.db
