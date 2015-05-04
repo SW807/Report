@@ -1,18 +1,16 @@
 \section{Dataindsamling}
-I \citefaelles{Sektion 3.3 Mobil logning} blev der nævnt adskillige muligheder for logning på mobiltelefon.
-Disse var; opkald, applikationsbrug og SMS/MMS.
-Derudover blev der i \citefaelles{Sektion 3.1 Sensorer} nævnt GPS, hvilket også ville kunne blive brugt som indikation på aktivitet, herunder social aktivitet.
+\mikkel{Med det nye fokus projektet har fået synes jeg ikke det her afsnit passer særlig godt ind.}
+Der findes adskillige muligheder for logning på Android-baserede mobiltelefoner \citefaelles{Sektion 3.3 Mobil logning}.
+Disse inkluderer blandt andet opkald, applikationsbrug og SMS/MMS.
+Derudover kan GPS \citefaelles{Sektion 3.1 Sensorer} også anvendes som indikation på aktivitet, herunder social aktivitet.
 
-Eksempler på brugen af disse logninger, i forbindelse med symptomerne (se \citefaelles{Sektion 1.21 Depression og 1.2.2 Mani}), blev analyseret i \citefaelles{Sektion 3.4}.
-Disse vil blive uddybet her, med eksempel på brug, samt begrænsninger, ved de forskellige logninger.
-
-Ved relatering til patienters adfærd, antages det at disse er udenfor, eller mellem, episode.
+Alle henvisninger til patienters adfærd kan antages som værende udenfor maniske eller depressive perioder.
 Dette gøres da det er vigtigt at opdage ændring i adfærden så tidligt som muligt, da lige så snart en episode er indtruffet vil applikationen ikke længere kunne assistere \citefaelles{Sektion 1.5 Fokusgruppeinterview}.
-Derved antages det at disse fungerer som almindelige mennesker, der går på arbejde eller i skole og deltager i andre aktiviteter (herunder sociale).
+Det er derfor nødvendigt at etablere en norm for den enkelte patient, således at ændringer i netop dennes adfærd kan detekteres.
 
 \subsection{GPS}
-Via smartphone, eller wearable som understøtter dette, er det muligt at forespørge på brugerens nuværende lokation.
-Dette resulterer, som minimum, i en længdegrad, breddegrad og præcision.
+Via smartphone, eller wearable som understøtter dette, er det muligt at forespørge på patientens nuværende lokation.
+Dette resulterer, som minimum \mikkel{Som minimum? Hvad er der mere at hente?}, i en længdegrad, breddegrad og præcision.
 Derudover kan flere forespørgsler kombineres til at sige noget om retning, hastighed og acceleration.
 
 Nogle patienter vil deltage i sociale aktiviteter, såsom sport eller anden klub-aktivitet, fest og generel social aktivitet med familie eller venner.
@@ -31,42 +29,45 @@ Omvendt kunne man også tage til en familiebegivenhed, hvor man ikke nødvendigv
 
 \subsection{Opkald}
 På Android-smartphones er det muligt at få adgang til opkalds-historikken.
-Her kan man se indgående, udgående og missede opkald, samt modtager/afsender og varighed.
+Her kan man se indgående, udgående og mistede opkald\footnote{Et mistet opkald er et indgående opkald som ikke besvares}, samt kontaktoplysninger og varighed af det enkelte opkald.
 
-Opkalds-historikken alene kan give et billede af kvantiteten for opkald, samt en smule om kvaliteten via opkaldets varighed.
+Denne meta-information om de opkald patienten foretager vil kunne danne grundlag for patientens normale adfærd.
+Ændringer heri kan være en indikation på en ændring i sindstilstand.
 Ved at tælle antallet af opkald, ville man kunne observere en ændring ved henholdsvis begyndende depression eller mani.
 Ved depression antages det at antallet af opkald, især udgående, vil falde.
+Tilsvarende kan det antages at patienten har flere mistede opkald end det er normalt for patienten.
 Det antages også at længden af opkaldene vil være kortere end normalt.
-Som benævnt i fokusgruppe-interviewet, vil ens netværk også mindskes, hvilket vil kunne ses på modtager/afsender på opkaldene, hvor antal forskellige kontaktpersoner vil falde.
+Som benævnt i fokusgruppe-interviewet, vil ens netværk også mindskes, hvilket vil kunne ses på modtager/afsender på opkaldene, hvor antallet af forskellige kontaktpersoner vil forventes at falde.
 Derimod vil man ved mani forvente en stigning i opkald, især udgående.
 Der vil også være en stigning i antal forskellige udgående kontakter.
 
 \paragraph{Begrænsninger}
-Da der kun ses på opkalds-historikken, er det ikke direkte muligt at sige noget om kvaliteten af opkaldene.
-Det vil sige at der ikke kan siges noget om hvor meget der bliver sagt af patienten, eller af afsender/modtager.
+Eftersom der kun arbejdes med meta-information om opkaldene, er det ikke direkte muligt at sige noget om kvaliteten af opkaldene.
+Det vil sige at der ikke kan siges noget om hvor meget og hvad der bliver sagt i den enkelte samtale.
 
-For mange personer vil der være begrænset brug af telefon-opkald, da der også vil foregå en stor del af den samme slags kommunikation via Facebook, Whatsapp, Skype eller lignende.
+For mange personer \mikkel{Har vi en kilde på 'mange'?} vil der være begrænset brug af telefon-opkald, da en del af kommunikationen vil foregå via andre platforme som fx Facebook, Whatsapp eller Skype.
+Disse understøtter også
 
 \subsection{SMS/MMS beskeder}
-Ligesom opkalds-historik, er der indbygget i Android mulighed for adgang til SMS/MMS-historik.
-Her kan man få en liste over beskeder, med for hver besked afsender/modtager, indhold (og derudaf længden), afsendt/modtaget tidspunkt og om hvorvidt det er en sendt eller modtaget besked.
+Ligesom opkalds-historik, er der i Android mulighed for adgang til SMS/MMS beskeder.
+Her kan man få adgangs til lister af beskeder\footnote{Indbakke, udbakke, sendte beskeder etc.}, med for hver besked afsender/modtager, indhold (og derudaf længden) samt afsendt/modtaget tidspunkt.
 
 Observation af beskeder vil fungere i høj grad på samme måde som opkald.
+Det betyder at der heller ikke med beskeder fokuseres på kommunikationens indhold men i stedet på dens volumen.
 
 \paragraph{Begrænsninger}
-For mange personer vil der være begrænset brug af SMS/MMS-beskeder, da der også vil foregå en stor del af den samme slags kommunikation via Facebook, Whatsapp, Skype eller lignende.
+Da indsamlingen af besked-information i høj grad ligner indsamlingen af opkalds-information gør de samme begrænsninger sig også gældende her.
 
 \subsection{Applikations-brug}
-I nyere versioner af Android er det muligt at få adgang til brugs-statistik for alle installerede applikationer.
+I nyere versioner af Android \footnote{Android 5.0 Lollipop} er det muligt at få adgang til brugs-statistik for alle installerede applikationer.
 Her er det muligt at forespørge på forskellige tidsintervaller, hvilket resulterer i en liste af applikationer brugt i tidsintervallet.
 For hver applikation vil der være informationer omkring totalt tidsforbrug i millisekunder, tidligste og seneste brug (indenfor angivet interval).
 
 Med denne information er det muligt at se hvor meget tid der bruges på applikationer med socialt indhold, som for eksempel Facebook, Skype e.l.
 
 \paragraph{Begrænsninger}
-Dette er kun muligt for nyere versioner af Android; fra og med API version 21, eller Androd 5.0 Lollipop.
-Det vil heller ikke være muligt at se hvad de forskellige apps har været brugt til, men kun i hvor lang tid.
-For eksempel vil man for Facebook-app'en ikke kunne se om der er brugt tid på at skrive til andre, læse nyheder eller spillet spil.
+Det er ikke muligt at se hvad de forskellige apps har været brugt til, men kun i hvor lang tid.
+For eksempel vil man for Facebook-app'en ikke kunne se om der er brugt tid på at skrive til andre, læse nyheder eller spille spil.
 
 \subsection{Andre ikke-udforskede muligheder}
 
