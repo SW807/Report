@@ -1,0 +1,78 @@
+\section{Survey som Dataindsamling}
+For at kunne udlede en sammenhæng mellem stemningsleje og social aktivitet skal der udover målinger af den sociale aktivitet også bruges subjektiv data fra patienten.
+Til dette formål skal der konstrueres en applikation der kan stille spørgsmål til patienten på varierende tidspunkter.
+
+\subsection{Spørgsmål}
+Da der er forskellige metoder til at konsultere en patient om sit stemningsleje er det nødvendigt at kunne stille spørgsmål på forskellige måder.
+Der er udvalgt tre typer spørgsmål som vi mener dækker de behov der i forhold til at udspørge patienten både om sin sociale færden og om sit stemningsleje.
+Disse typer vil i det følgende blive gennemgået med eksempler på hvilke relevante metoder fra psykologien de kan bruges til.
+
+\paragraph{Multiple choice}
+Stemningsregistrering \stefan{ref til Måling af sindstilstand} bruger en skala fra ``svær depression'' til ``svær mani'' til at holde øje med hvor patientens stemningsleje.
+Det skal både være muligt at lave spørgsmål hvor man kun kan vælge en mulighed og spørgsmål hvor man kan vælge flere svarmuligheder.
+Jævnfør stemningregistrering skalaen skal der kunne tilknyttes en farve til de forkellige muligheder.
+
+\stefan{Hamilton}
+
+\paragraph{Tekst}
+For at give mulighed for at patienten kan skrive dagbog \stefan{ref til Måling af sindstilstand} skal der bruges en spørgsmålstype der kan vise en kort tekst som besvares med en tekst fra et tekstfelt.
+På denne måde kan der både skrives regulær dagbog, og der kan stilles konkrete spørgsmål såsom ``Hvordan har du ageret socialt i dag''.
+
+\paragraph{Skala}
+I metoden PANAS \stefan{ref til Måling af sindstilstand}spilles patienten et spørgsmål om i hvor høj grad han har følt en bestemt følelse i en vis tidsperiode.
+Dette besvares så på en skala fra 1 til 5.
+
+Vi har altså behov for et spørgsmål der kan besvares med en numerisk skala med mulighed for at sætte labels på skalaen.
+
+\paragraph{Implementation}
+De tre typer af spørgsmål er blevet implementeret som kan ses på \cref{sporgsmål}.
+På \cref{multi} kan ses en multiple choice spørgsmål hvor der kan vælges flere svarmuligheder.
+Dette spørgsmål findes også i en variant hvor man kun kan vælge en mulighed, indikeret ved runde svarbokse (radio buttons).
+
+\cref{skala} viser et spørgsmål der besvares ved en skala. 
+Her vises den med to labels ved minimum og maksimum værdierne.
+
+\cref{tekst} viser et spørgsmål der skal besvares ved en tekst. 
+
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{multiple_choice}
+		\caption{Multiple choice}\label{multi}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{skala}
+		\caption{Skala}\label{skala}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{tekst}
+		\caption{Tekst}\label{tekst}
+	\end{subfigure}
+	\caption{De tre spørgsmålstyper}\label{sporgsmål}
+\end{figure}
+
+
+\subsection{Scheduler}
+For at kunne stille spørgsmål så fleksibelt som muligt er der blevet konstrueret en scheduler.
+Stemningsregistrering og dagbog skal ske én gang om dagen, mens PANAS spørgsmål sagtens kan spredes ud over dagen for at få et bredere billede af patientens tilstand.
+
+
+\paragraph{Notifikationer}
+For ikke at forstyrre brugerens hverdag for meget bruger vi en notifikation til at advisere om et forestående spørgsmål.
+Notifikationen indeholder spørgsmålsteksten, så patienten kan vurdere om han har tid til at besvare spørgsmålet.
+Eksempler på disse notifikationer kan ses på \cref{noti}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{notifikation}
+	\caption{Tre notifikationer sendt af Survey}\label{noti}
+\end{figure}
+
+Når der trykkes på notifikationen dukker spørgsmålet op i en dialogboks hvor patientes svar kan indføres.
+
+For at gøre systemet endnu mere fleksibelt skal der være mulighed for at kunne udskyde et spørgsmål.
+På denne måde har patienten fuld kontrol over hvornår han svarer, uden at være nødt til at skulle afbryde det han er i gang med.
+Dette er endnu ikke implementeret.
