@@ -1,0 +1,22 @@
+\section{Implementerede Moduler}
+I \cref{datasamling} blev en række mulige datakilder beskrevet for at klargøre de muligheder projektgruppen så for indsamling af information der relaterer sig til en patients sociale aktivitet.
+Af disse muligheder er indsamlingen af opkalds-oplysninger og meta information om sms og mms beskeder blevet implementeret.
+Disse er udvalgt, da de repræsenterer den traditionelle brug af en mobiltelefon samt en simpel tilgang til informationen.
+
+Da dette projekt søger at etablere en platform til at foretage eksperimenter der skal hjælpe med at klarlægge en relation mellem social aktivitet og sindstilstand, er kun de simpleste informationskilder blevet implementeret.
+Det betyder at tiden bedre har kunnet udnyttes til implementation af den underliggende platform.
+
+De to informationskilder er implementeret som to separate sensor moduler\mikkel{Mulig reference til fælles rapport.}, der hver især indsamler meta-information om deres respektive kilder.
+
+Begge moduler er implementeret således at de, hver gang de startes, indlæser alt nytilkommen data.
+Denne opbygning tillader modulerne at være konstrueret uafhængigt af endeligt brug.
+Derved laves der under udvikling af modulerne færre restriktioner på deres brug i den endelige løsning.
+
+De to moduler, det data de hver indsamler samt deres repræsentation af dette data beskrives i større detalje herunder.
+
+%Argumentation ud fra dataindsamlingsmuligheder
+%opkald
+%sms/mms
+
+\paragraph{Opkald}
+\paragraph{SMS/MMS beskeder}
