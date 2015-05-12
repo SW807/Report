@@ -1,0 +1,24 @@
+\begin{lstlisting}[float,
+basicstyle=\ttfamily\footnotesize,
+caption={Modul definitionen for opkald},label=module:calls]
+{
+  "name": "module_calls_meta",
+  "_version": 1.0,
+  "tables": [
+    {
+      "name": "call_history",
+      "columns": [
+        { "name": "caller", "dataType": "TEXT", "_unit": "Caller number." },
+        { "name": "date", "dataType": "INTEGER", "_unit": "Timestamp." },
+        { "name": "length", "dataType": "REAL", "_unit": "Duration in seconds."  },
+        { "name": "incoming", "dataType": "INTEGER", "_unit": "boolean", "_info": "True if the call was incoming." },
+        { "name": "answered", "dataType": "INTEGER", "_unit": "boolean", "_info": "True if the call was answered." }
+      ]
+    }
+  ],
+  "task": {
+    "type": "scheduled",
+    "value": "03:00"
+  }
+}
+\end{lstlisting}

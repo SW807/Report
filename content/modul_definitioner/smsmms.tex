@@ -1,0 +1,24 @@
+\begin{lstlisting}[float,
+basicstyle=\ttfamily\footnotesize,
+caption={Modul definitionen for sms/mms},label=module:sms]
+{
+  "name": "smsmmsmeta",
+  "_version": 1.0,
+  "tables": [
+    {
+      "name": "smsmmsmeta",
+      "columns": [
+        { "name": "contact", "dataType": "TEXT", "_unit": "Caller number" },
+        { "name": "date", "dataType": "INTEGER", "_unit": "Timestamp" },
+        { "name": "length", "dataType": "INTEGER", "_unit": "Number of characters" },
+        { "name": "incoming", "dataType": "INTEGER", "_unit": "boolean", "_info": "True if the message is in an inbox; otherwise false." },
+        { "name": "mms", "dataType": "INTEGER", "_unit": "boolean", "_info": "True if the message is an mms; otherwise false." }
+      ]
+    }
+  ],
+  "task": {
+    "type": "scheduled",
+    "value": "03:00"
+  }
+}
+\end{lstlisting}
