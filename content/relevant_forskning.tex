@@ -9,15 +9,15 @@
 % Tidligere: sociale aktiviteter -> affekt
 % Metode: Inducering af humør, vurdering af humør, vurdering af fundne aktiviteter
 
-\section{Relevant Forskning}
+\chapter{Relevant Forskning}
 Ved at undersøge den nuværende forskning, vil vi først og fremmest fastslå at der er en forbindelse mellem humør og social aktivitet.
 Disse vil findes indenfor psykologi-faget.
-Vi har en formodning om at måden hvorpå dataindsamling og eksperimentering foregår indenfor dette fag, er ved interview og spørgeskemaer.
+Vi har en formodning om at måden hvorpå dataindsamling og eksperimentering foregår indenfor dette fag, er ved interview og spørgeskemaer.\bruno{Fortalte Jørgen og Janne ikke at det var sådan? Evt. brug dem som kilde - hvis det er sandt.}
 Dette mener vi at ville kunne gøres bedre med mere objektive og tidssvarende dataindsamling, som fx. ved løbende forespørgsler via smartphone.
 Derfor vil vi til sidst undersøge relevant forskning indenfor dataindsamling på smartphone, specifikt ift. sindstilstand.
 Her vil vi også se på allerede eksisterende, indenfor psykologi, spørgeskemaer, for at skabe et grundlag til hvilken slags forespørgsler, samt tidspunkter og frekvens for disse, er relevant.
 
-\subsection{Sammenhæng mellem humør og social aktivitet}
+\section{Sammenhæng mellem humør og social aktivitet}
 Ud fra de definitioner der er givet i forrige afsnit, er det humør som vi er interesseret i, da det dækker over længerevarende ændringer, hvilket er tilfældet ved mani-depressive perioder.
 
 For at undersøge den psykologiske forskning og eksperimentering der er foregået op til nu, i forhold til sammenhæng mellem humør og social aktivitet, tages der udgangspunkt i \citet{whelan}.
@@ -40,25 +40,50 @@ Sidste trin er en evaluering af de 28 tidligere fastslåede aktiviteter; hvor de
 Det konkluderes ud fra eksperimentet at positivt humør fører til højere lyst til at udføre mere sociale aktiviteter.
 Derudover noteres det også at der var en bemærkelsesværdig tendens for de personer der fik induceret negativt humør, havde en højere lyst til ikke-sociale aktiviteter.
 
-\subsection{Brug af mobil data-indsamling}
+\section{Brug af mobil data-indsamling}
 Der er fundet to eksempler på brugen af mobil data-indsamling relateret til detektering af humør-ændringer; \citet{social_sensing} og \citet{social_sensing_2}.
 
-\subsubsection{Social Sensing for Epidemiological Behaviour Change}
+\subsection{Social Sensing for Epidemiological Behaviour Change}
+% Metode: knytning mellem spørgeskema og ren mobil logning
+% Knytter kun de to for 48 timers vinduer, ikke ændring over tid
+% For tæt knyttet på fysisk sygdom, så resultater ikke de bedste for psykisk (kun 2 daglige meget store spørgsmål)
 I \citet{social_sensing} bruges smart phone data til at undersøge mulighederne for at bruge mobil dataindsamling til at detektere adfærdsændringer, hvilket kan sige noget om en person er syg (fysisk eller psykisk).
 Social data indsamles via opkaldshistorik, SMS-historik og bluetooth proximity (hvor muligt) bruges til ansigt-til-ansigt interaktion, samt WLAN-baseret lokations estimering.
 Derudover blev der hver dag udfyldt et spørgeskema, bestående af seks spørgsmål angående fysisk og psykisk helbred.
 
 Forsøget blev udført med 70 beboere på et afsnit af et kollegium for bachelor-studerende, hvor de 70 beboere var ca. 80 \% af det totale antal beboere i afsnittet.
+Data blev indsamlet fra 1. februar til 15. april (2.5 måned), hvor mobil data blev uploadet døgnet rundt og spørgeskemaer udfyldt hver morgen kl. 6.
+Perioden blev delt op i 48 timers intervaller, hvor de spørgeskemaer der blev indsamlet i hvert interval blev knyttet til den indsamlet data for samme interval.
 
+Resultaterne er i mindre grad interessante, da de er nærmere relateret fysisk sygdom og mildere depressioner.
+Dog er værd at bemærke at der blev fundet en sammenhæng mellem antallet af opdagede bluetooth devices, wifi rfids, sociale interaktioner og fysisk/psykisk sygdom.
+De personer der meldte sad/lonely/depressed eller havde færre totale interaktioner for samme interval, færre bluetooth og wifi enheder opdaget.
+De personer der meldte stress havde ligeså et fald i samtlige mobile målinger, desuden faldt antallet af unikke sociale interaktioner.
 
+\paragraph{Kritik af metode}
+Der bruges et meget simpelt spørgeskema, med seks spørgsmål (oversat):
+\begin{enumerate}
+\item Har du ondt i halsen eller hoste?
+\item Løber din næste, er den stoppet eller nyser du?
+\item Har du feber?
+\item Har du kastet op, har kvalme eller diarré?
+\item Har du følt dig ked af det, ensom eller deprimeret på det seneste?
+\item Har du følt dig stresset på det seneste?
+\end{enumerate}
 
-\subsubsection{Using Social Sensing to Understand the Links Between Sleep, Mood, and Sociability}
-I \citet{social_sensing_2} bruges lige så smart phone til indsamling af data.
+De spørgsmål der er relateret til psykisk helbred er meget overordnet, og giver derfor kun et groft billede.
+
+Spørgeskemaet blev udsendt hver morgen kl. 6, og på trods af at deltagerne blev betalt \$ 1 for hvert udfyldt spørgeskema blev kun 63 \% udfyldt.
+Ifølge \citet{panas} i forsøg udført med henholdsvis 80 og 123 personer, oplevede de mindre affekt om morgenen, hvor den steg hen over dagen, og faldt igen om aftenen.
+Dette indikerer at forespørgsel-tidspunkt skal tages med i beregningerne, eller at de skal foretages på flere og mere varierede tidspunkter.
+
+\subsection{Using Social Sensing to Understand the Links Between Sleep, Mood, and Sociability}
+I \citet{social_sensing_2} bruges lige så smartphone til indsamling af data.
 Her bruges dog kun bluetooth proximity til at tælle antal sociale interaktioner.
 Til indsamling af øvrig data bruges daglige, ugentlige og månedlige spørgeskemaer omkring forhold, social aktivitet, humør, kost, motion og søvn.
 Disse blev udfyldt gennem smartphone eller web-applikation.
 
-Eksperimentet blev udført med 54 deltager, over en 7 måneder, hvor alle deltagere boede i et samfund med 400 beboere, hvor alle bopæle havde knytning til universitetet.
+Eksperimentet blev udført med 54 deltager, over en periode på 7 måneder, hvor alle deltagere boede i et samfund med 400 beboere, hvor alle bopæle havde knytning til universitetet.
 
 De 3 undersøgte faktorer; søvn, humør og social aktivitet blev alle simplificeret.
 Søvn blev reduceret til 7-værdi skala; 5, 6, 7, 8, 9, samt 2 værdier henholdsvis under og over skalaen.
@@ -74,11 +99,17 @@ Derimod var der ingen mærkbar forskel på antallet af sociale interaktioner for
 Det største problem med den overordnede metode til indsamling af data, er i forhold til indsamling af data vedr. social aktivitet.
 Ansigt-til-ansigt interaktion er kun én del ud af den totale mængde sociale interaktion, og derudover var den kun detekterbar mellem de personer der besad smartphone med dertilhørende bluetooth primity app.
 Derfor kunne det være at dage med lavere social aktivitet kunne være nærmere knyttet til en mindre lyst til at begive sig udenfor, fremfor lyst til social aktivitet, som så måske kunne detekteres på anden vis.
+Et eksempel på social aktivitet der ikke kan detekteres af denne metode er fx interaktion over social medier.\bruno{et eksempel jeg har tilføjet for at gøre det mere klart - kan være at det er overflødigt?}
 
 Et andet problem med denne metode er også at kvaliteten af søvn og humør data er lav, så ud over en overfladisk forbindelse kan der ikke siges om hvordan humør og social aktivitet forholder sig i løbet af dagen.
 Det nævnes kun kort at personer der generelt havde færre aggregeret sociale interaktioner, generelt havde dårligere humør, hvilket er statistisk signifikant.
 Der var også mulighed for at undersøge socialt netværk og ændringen i dette, men er umiddelbart ikke en del af eksperimentet.
 
-\subsection{Måling af sindstilstand}
-En anerkendt liste af begreber relateret til positiv og negativ affekt, som bruges til at vurdere sindstilstand, er \citet{panas}.
+\section{Måling af sindstilstand}
+
+\input{content/panas}
+
+\input{content/stemningsregistrering}
+
+\input{content/ham_d}
 
