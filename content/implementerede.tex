@@ -39,4 +39,30 @@ Det bliver altså på denne måde muligt at styre hvor længe informationen skal
 \input{content/modul_definitioner/calls}
 
 \paragraph{SMS/MMS beskeder}
+\mikkel{SMS eller sms?}
+For SMS beskeder er proceduren for indlæsning af information næsten lige så triviel som for opkald.
+Den eneste forskel er at beskederne er organiseret i mere end en tabel.
+Altså kan der stadig blot laves en direkte kopiering af data, dog fra mere end en tabel.
+
+Samme udgangspunkt anvendes til indlæsning af MMS beskeder.
+Her eksisterer dog en separat tabel til kontakt-informationer, eftersom MMS beskeder kan anvendes til gruppekommunikation.
+Den ekstra tabel tillader en en-til-mange relation mellem besked og kontakter.
+Sendes en besked til mere end en modtager, gemmes dette i modulets tabel som flere separate beskeder.
+
+Yderligere kan MMS beskeder indeholde andre type data end blot tekst.
+En ekstra tabel tillader aflæsning af disse enkelte dele af MMS beskeder.
+Kun tekst-delene af beskederne kopieres af modulet.
+Da tekst kan relatere sig til andre dele af en besked eller være helt blottet for tekst men ej indhold, markeres beskeder i modulets tabel som værende MMS beskeder.
+Dermed kan der tages særligt hensyn til sådanne beskeder i en eventuel tekstuel analyse samt statistisk analyse af beskedstørrelser.
+
+Modul-definitionen for beskeder kan ses i \cref{module:smsmms}.
+Af denne fremgår det at de information der indhentes om hvert opkald er:
+\begin{itemize}
+\item Kontakt oplysning (telefonnummer).
+\item Dato for beskeden.
+\item Beskedens indhold (tekst).
+\item Hvorvidt beskeden var indgående/udgående.
+\item Hvorvidt beskeden var en MMS.
+\end{itemize}
+
 \input{content/modul_definitioner/smsmms}
