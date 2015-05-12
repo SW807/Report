@@ -11,14 +11,19 @@ De to informationskilder er implementeret som to separate sensor moduler\mikkel{
 Begge moduler er implementeret således at de, hver gang de startes, indlæser alt nytilkommen data.
 Denne opbygning tillader modulerne at være konstrueret uafhængigt af endeligt brug.
 Derved laves der under udvikling af modulerne færre restriktioner på deres brug i den endelige løsning.
+Hvor ofte denne opdatering finder sted er givet ved hvert af modulernes modul-definitioner \citefaelles{4.4 Modul-definition}.
 
 De to moduler, det data de hver indsamler samt deres repræsentation af dette data beskrives i større detalje herunder.
-
 %Argumentation ud fra dataindsamlingsmuligheder
 %opkald
 %sms/mms
 
 \paragraph{Opkald}
+Ud fra beskrivelsen givet i \cref{datasamling:opkald}, er der ikke mange muligheder for indsamling af data for opkald.
+Alt nødvendig information opbevares af Android i en enkelt database tabel.
+Der kan dermed foretages en direkte mapping fra denne tabel, til modulets egen tabel.
+Modul-definitionen for opkald kan ses i \cref{module:calls}.
+
 \input{content/modul_definitioner/calls}
 
 \paragraph{SMS/MMS beskeder}
