@@ -21,8 +21,20 @@ De to moduler, det data de hver indsamler samt deres repræsentation af dette da
 \paragraph{Opkald}
 Ud fra beskrivelsen givet i \cref{datasamling:opkald}, er der ikke mange muligheder for indsamling af data for opkald.
 Alt nødvendig information opbevares af Android i en enkelt database tabel.
-Der kan dermed foretages en direkte mapping fra denne tabel, til modulets egen tabel.
+Der kan dermed foretages en direkte mapping fra denne tabel, til modulets egen tabel, ved blot at kopiere de aktuelle informationer.
+
 Modul-definitionen for opkald kan ses i \cref{module:calls}.
+Af denne fremgår det at de information der indhentes om hvert opkald er:
+\begin{itemize}
+\item Kontakt oplysning (telefonnummer).
+\item Dato for opkaldet.
+\item Opkaldets varighed.
+\item Hvorvidt opkaldet var indgående/udgående.
+\item Hvorvidt opkaldet blev besvares eller ej.
+\end{itemize}
+
+Ved at kopiere disse informationer, tillades en ensartet tilgang til dem for andre moduler og der skabes en uafhængighed af historikkens størrelse.
+Det bliver altså på denne måde muligt at styre hvor længe informationen skal være tilgængelig for andre moduler.
 
 \input{content/modul_definitioner/calls}
 
