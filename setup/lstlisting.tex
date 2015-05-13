@@ -4,9 +4,11 @@
 
 % 
 % Listings kan refereres vha. \cref{}
-\crefname{listing}{Kode eksempel}{kode eksempel}
-\Crefname{listing}{Kode eksempel}{Kode eksempel}
-% 
+\crefname{lstlisting}{kode eksempel}{kode eksempler}
+\Crefname{lstlisting}{Kode eksempel}{Kode eksempler}
+\renewcommand{\lstlistingname}{Kode eksempel}
+\renewcommand{\lstlistlistingname}{Liste af kode eksempler}
+%
 
 %Algoritmer i cref
 \crefname{algocf}{algoritmne}{algoritmne}
@@ -27,10 +29,6 @@
     \csname p@#1\endcsname\csname the#1\endcsname}}
 \makeatother
 %
-
-% Angivelse af navn på listings
-\renewcommand\lstlistingname{Code example}
-\renewcommand\lstlistlistingname{Code example}
 
 \lstdefinestyle{standard}
 {
