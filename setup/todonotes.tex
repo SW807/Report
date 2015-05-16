@@ -19,16 +19,17 @@
     \todo[backgroundcolor=#4,caption=
     {\textbf{#3: } #2}
     ,inline]
-    {\color{#5}\textbf{#3: }#2}
+    {\normalsize\color{#5}\textbf{#3: }#2}
   }
   {
     \todo[backgroundcolor=#4,caption=
     {\textbf{#3: } #1}
     ,inline]
-    {\color{#5}\textbf{#3: }#2}
+    {\normalsize\color{#5}\textbf{#3: }#2}
   }
 }
 \newcommand{\mikkel}[2][]{\namedtodo{#1}{#2}{Mikkel}{blue!80}{white}}
+\newcommand{\mikkelin}[2][]{\namedtodoinline{#1}{#2}{Mikkel}{blue!80}{white}}
 \newcommand{\stefan}[2][]{\namedtodoinline{#1}{#2}{Stefan M}{orange}{black}}
 \newcommand{\mikael}[2][]{\namedtodoinline{#1}{#2}{Mikael}{green}{black}}
 \newcommand{\bruno}[2][]{\namedtodoinline{#1}{#2}{Bruno}{black!10!red!90}{white}}

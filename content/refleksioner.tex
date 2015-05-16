@@ -1,1 +1,75 @@
-\section{Idéer til model}
+%Til survey: Tilføj "huskekort" - som får patienten til at vykel en tur, yoga etc. - enten at appen selv finder ud af det eller at det er spykologen der løbende kan lægge dem ind.
+\section{Notifikationer}
+En naturlig udvikling af det udviklede survey modul ville være, i stedet for at indhente oplysninger fra brugeren, at præsentere dem.
+Altså at kunne notificere brugeren med information.
+Dette kunne enten ske på faste tidspunkter eller ved at et analyse modul registrerer en ændring i et af de monitorerede adfærdsmønstre.
+Ligeledes kan patienten modtage en status-notifikation, der fx kan beskrive en opsummering over hans sociale aktivitet målt over den seneste uge.
+
+\paragraph{Det udviklede modul}
+Survey modulet tillader at indsamle information fra brugeren via en række forskellige typer spørgsmål (se \cref{survey:spg}).
+Modulet fungerer herved som et sensor modul der anvender brugerens respons som dets input.
+Modulet adskiller sig dog fra andre sensor moduler idet det anvender en grafisk brugergrænseflade til at indsamle information.
+Givet relationen mellem de forskellige moduler (sensor-, analyse- og visningsmoduler) introducerer ovenstående en ny problemstilling.
+
+Da information kun kan overføres fra sensor til analyse og videre til visning, og ikke i den modsatte retning, vil notifikationer skulle implementeres som et visningsmodul.
+Kun på denne måde kan en notifikation præsentere information fra underliggende lag.
+Det betyder at notifikationer og spørgsmål vil skulle udvikles som to separate moduler.
+Modulerne kan defineres som en del af samme applikation for derved at kunne anvende samme kode-base, men vil i sidste ende skulle fungere som to moduler.
+
+Skulle man yderligere ønske at præsentere information i et spørgsmål ville det kræve en sammensmeltning af de to typer moduler.
+En sådan kombination af moduler er problematisk under den nuværende arkitektur, da den vil kræve både input og output i samme modul.
+
+\section{Work-In-Progress}
+\mikkelin{Jeg kunne ikke lige komme på en bedre titel.
+Noget der dækker over \textit{alt det vi gerne ser bliver lavet ved modulet}.}
+Under udviklingen af det nye modul har projektgruppen observeret en række problemstillinger.
+Disse hindrer ikke brugen af modulet, idet kernefunktionaliteten er blevet implementeret i projektforløbet.
+Dog bør disse håndteres inden, eller som en del af, udførelse af eksperimenter med modulet.
+
+Dette afsnit diskuterer nogle af udfordringerne forbundet med videreudviklingen af det udviklede survey modul.
+
+%Holde styr på om man svarer på spørgsmål
+\subsection{Manglende svar}
+Det udviklede modul er bygget op om ideen om relationen mellem spørgsmål og svar.
+Det vil sige, at der for hvert spørgsmål forventes et svar.
+Dog er dette ikke nødvendigvis altid tilfældet.
+Man må antage at der opstår situationer hvor patienten ikke besvarer et spørgsmål.
+En mulig årsag til dette kunne være, at patienten grundet depression ikke kan overskue at tage stilling til spørgsmål.
+Men også helt almindelige dagligdags situationer som fx at have glemt telefonen hjemme eller løbe tør for strøm, kan resultere i at patienten ikke besvarer et spørgsmål.
+
+Det implementerede modul understøtter ikke indsamlingen af information om hvorvidt et spørgsmål er blevet besvaret eller ej.
+Da manglende besvarelse kan være en mulig indikation for en kommende depression, idet patienten pga manglende overskud kan finde på ikke at besvare spørgsmål.
+Det vil naturligvis være nødvendigt at foretage et eksperiment der kan afklare om en sådan relation eksisterer.
+Men for at udføre dette eksperiment vil det være nødvendigt at lade systemet registrere hvilke spørgsmål der er besvaret, samt hvilke der ikke er det.
+
+\paragraph{Aktiv udsættelse af besvarelse}
+Som et led i understøttelsen af ovenstående vil det være fordelagtigt, at give patienten selv muligheden for at afvise at besvare et spørgsmål.
+Således kan det undersøges om patienten tager et aktivt fravalg af besvarelse.
+Det vil naturligvis ikke være endegyldigt, da et aktivt fravalg vil kunne opfattes passivt af mobiltelefonen.
+Patienten kan eksempelvis vælge slet ikke at reagere på en notifikation.
+
+%Tilføj "Postpone"-knap så det er muligt at svare senere på spørgsmål
+Udover muligheden for at afvise besvarelse, vil patienten i nogle situationer muligvis blot have brug for en udsættelse af besvarelsen.
+Med denne mulighed kan der \textit{muligvis} indsamles mere information end ved en model der kun har mulighed for komplet afvisning.
+Hvorvidt dette faktisk er tilfældet, kan på undersøges ved at stille funktionaliteten til rådighed for patienten.
+
+%Mere dynamisk styring af hvad tidspunkt spoergsmaal bliver vist paa
+\subsection{Tidspunkt for spørgsmål}
+\mikkelin{Vi mangler noget tekst til ''Mere dynamisk styring af hvad tidspunkt spoergsmaal bliver vist paa''.}
+
+%GUI skal forbedres meget - fordi det ikke har været i fokus
+\mikkelin{Jeg ved ikke hvad jeg skal skrive om ''GUI skal forbedres meget''. Det virker nemt som en standard ting at sige.}
+
+%Anvendelse (model/eksperimentering)
+\section{Usikkerheder og eksperimenter}
+Forståelsen af relationen mellem patientens adfærd, stemningsleje og interaktion med mobiltelefon er stadig uklar.
+Dette projekt lægger op til en række eksperimenter der kan være med til at afklare nogle af disse relationer.
+Eksempelvis betydningen af patientens digitale sociale interaktion i forhold til stemningsleje.
+Nogle af disse eksperimenter vil kunne udføres simultant, i form af dataindsamlingen.
+Efter en periode med indsamling af data, vil det være muligt at begynde at lede efter sammenhænge i det indsamlede data.
+Fx relationen mellem stemningsleje og størrelsen af en patients kontaktflade før, under og efter en depression eller manisk periode.
+
+\paragraph{Ikke-eksperimentel anvendelse}
+Udover muligheden for at vurdere sammenhænge mellem det indsamlede data kan informationerne også anvendes direkte som en datakilde, på lige fod med telefonens sensorer.
+På denne måde kan patienten skabe sig et overblik over sin egen sindstilstand (ex stemningsleje og dagbog) for på den måde objektivt at kunne følge egne subjektive vurderinger over tid.
+Altså er det på den måde muligt at eliminere dårlig hukommelse som fejlkilde, og derved skabe et mere realistisk verdensbillede for patienten.
