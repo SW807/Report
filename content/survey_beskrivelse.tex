@@ -25,34 +25,40 @@ Dette besvares så på en skala fra et til fem.
 
 Vi har altså behov for et spørgsmål der kan besvares med en numerisk skala med mulighed for at sætte labels på skalaen.
 
-\paragraph{Implementation}
-De tre typer af spørgsmål er blevet implementeret som kan ses på \cref{sporgsmål}.
-På \cref{multi} kan ses en multiple choice spørgsmål hvor der kan vælges flere svarmuligheder.
+\subsection{Implementation af de forskellige typer svar\bruno{Eller spørgsmål - hvad vi nu finder ud af}}
+Gennem dette afsnit vil der blive refereret til \cref{stemreg::spoergsmaal}, som er en eksempel implementation af metoden: stemningsregistrering beskrevet i \cref{stemningsleje::stemningsregistrering}.
+De tre typer af spørgsmål, beskrevet i \cref{krav::typer}, er blevet implementeret, eksempler på brug kan ses på \cref{stemreg::spoergsmaal}.
+På \cref{stemreg::stemningsleje} kan ses en multiple choice spørgsmål hvor der kan vælges flere svarmuligheder.
 Dette spørgsmål findes også i en variant hvor man kun kan vælge en mulighed, indikeret ved runde svarbokse (radio buttons).
 
-\Cref{skala} viser et spørgsmål der besvares ved en skala. 
-Her vises den med to labels ved minimum og maksimum værdierne.
+\Cref{stemreg::angst} og \cref{stemreg::soevn} viser et spørgsmål der besvares ved en skala. 
+Spørgsmålene har to labels et for minimum og et for maksimum.
 
-\Cref{tekst} viser et spørgsmål der skal besvares ved en tekst. 
+\Cref{stemreg::notater_vaegt} viser et spørgsmål der skal besvares ved en tekst. 
 
 
 \begin{figure}
 	\centering
-	\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{multiple_choice}
-		\caption{Multiple choice}\label{multi}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{stemningsregistrering_eksempel/stemningsleje}
+		\caption{Multiple choice}\label{stemreg::stemningsleje}
 	\end{subfigure}
 	~
-	\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{skala}
-		\caption{Skala}\label{skala}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{stemningsregistrering_eksempel/notater_vaegt}
+		\caption{Skala}\label{stemreg::angst}
+	\end{subfigure}
+	\newline
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{stemningsregistrering_eksempel/soevn}
+		\caption{Skala}\label{stemreg::soevn}
 	\end{subfigure}
 	~
-	\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{tekst}
-		\caption{Tekst}\label{tekst}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{stemningsregistrering_eksempel/angst}
+		\caption{Tekst}\label{stemreg::notater_vaegt}
 	\end{subfigure}
-	\caption{De tre spørgsmålstyper}\label{sporgsmål}
+	\caption{De fire spørgsmål der bruges i metoden: stemningsregistrering( \cref{stemningsleje::stemningsregistrering}).}\label{stemreg::spoergsmaal}
 	\stefan{fix afstanden til bunden af billederne}
 \end{figure}
 
@@ -68,8 +74,8 @@ Eksempler på disse notifikationer kan ses på \cref{noti}.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.6\textwidth]{notifikation}
-	\caption{Tre notifikationer sendt af Survey}\label{noti}
+	\includegraphics[width=0.6\textwidth]{stemningsregistrering_eksempel/notification_bar}
+	\caption{Fire notifikationer sendt af Survey}\label{noti}
 \end{figure}
 
 Når der trykkes på notifikationen dukker spørgsmålet op i en dialogboks hvor patientes svar kan indføres.
