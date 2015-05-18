@@ -2,35 +2,36 @@
 
 \section{Forbedringer til 'Survey'-modulet}
 Under udviklingen af det nye modul har projektgruppen observeret en række problemstillinger.
-Disse hindrer ikke brugen af modulet, idet kernefunktionaliteten er blevet implementeret i projektforløbet.
-Dog bør disse håndteres inden, eller som en del af, udførelse af eksperimenter med modulet.
+Disse problemstillinger vil blive diskuteret i denne sektion, hvor foreslåede løsninger også vil blive præsenteret.
 
-Dette afsnit diskuterer nogle af udfordringerne forbundet med videreudviklingen af det udviklede survey modul.
+Disse problemstillinger hindrer ikke brugen af modulet, idet kernefunktionaliteten er blevet implementeret i projektforløbet.
+Dog bør disse håndteres inden, eller som en del af, udførelse af eksperimenter med modulet bør foretages.
 
 %Holde styr på om man svarer på spørgsmål
 \subsection{Manglende svar}
-Det udviklede modul er bygget op om ideen om relationen mellem spørgsmål og svar.
+Det udviklede modul er bygget ud fra idéen om en relation mellem spørgsmål og svar.
 Det vil sige, at der for hvert spørgsmål forventes et svar.
 Dog er dette ikke nødvendigvis altid tilfældet.
-Man må antage at der opstår situationer hvor patienten ikke besvarer et spørgsmål.
+Antageligvis vil der opstå situationer hvor patienten ikke besvarer et spørgsmål, altså som det er nu vil det sige at patienten ikke vælger en svarmulighed eller skriver noget tekst og/eller ikke trykker 'ok'.
 En mulig årsag til dette kunne være, at patienten grundet depression ikke kan overskue at tage stilling til spørgsmål.
-Men også helt almindelige dagligdags situationer som fx at have glemt telefonen hjemme eller løbe tør for strøm, kan resultere i at patienten ikke besvarer et spørgsmål.
+Men også helt almindelige dagligdags situationer som fx. at have glemt telefonen hjemme, eller at den er løbet tør for strøm, kan resultere i at patienten ikke besvarer et spørgsmål.
 
 Det implementerede modul understøtter ikke indsamlingen af information om hvorvidt et spørgsmål er blevet besvaret eller ej.
-Da manglende besvarelse kan være en mulig indikation for en kommende depression, idet patienten pga manglende overskud kan finde på ikke at besvare spørgsmål.
-Det vil naturligvis være nødvendigt at foretage et eksperiment der kan afklare om en sådan relation eksisterer.
-Men for at udføre dette eksperiment vil det være nødvendigt at lade systemet registrere hvilke spørgsmål der er besvaret, samt hvilke der ikke er det.
+Det er en mulighed at besvarelser kan være en indikator på en ændring i adfærden, idet patienten pga. manglende overskud kan vælge ikke at besvare.
+Det vil naturligvis være nødvendigt at foretage et eksperiment der kan afklare om dette er tilfældet.
+For at udføre dette eksperiment vil det være nødvendigt at lade systemet registrere hvilke spørgsmål der er besvaret, samt hvilke der ikke er det.
 
 \paragraph{Aktiv udsættelse af besvarelse}
 Som et led i understøttelsen af ovenstående vil det være fordelagtigt, at give patienten selv muligheden for at afvise at besvare et spørgsmål.
-Således kan det undersøges om patienten tager et aktivt fravalg af besvarelse.
+Således kan det undersøges om patienten tager et aktivt fravalg af besvarelse, og yderlige kunne angives hvad grunden er for dette (ikke tid, ikke lyst, ved ikke).
 Det vil naturligvis ikke være endegyldigt, da et aktivt fravalg vil kunne opfattes passivt af mobiltelefonen.
 Patienten kan eksempelvis vælge slet ikke at reagere på en notifikation.
+\mikael{Forstår ikke de sidste 2 sætninger her}
 
 %Tilføj "Postpone"-knap så det er muligt at svare senere på spørgsmål
-Udover muligheden for at afvise besvarelse, vil patienten i nogle situationer muligvis blot have brug for en udsættelse af besvarelsen.
+Udover muligheden for at afvise spørgsmål, vil patienten i nogle situationer muligvis blot have brug for en udsættelse af spørgsmålet.
 Med denne mulighed kan der \textit{muligvis} indsamles mere information end ved en model der kun har mulighed for komplet afvisning.
-Hvorvidt dette faktisk er tilfældet, kan på undersøges ved at stille funktionaliteten til rådighed for patienten.
+Hvorvidt dette faktisk er tilfældet kan undersøges ved at stille funktionaliteten til rådighed for patienten.
 
 %Mere dynamisk styring af hvad tidspunkt spoergsmaal bliver vist paa
 \subsection{Tidspunkt for spørgsmål}
