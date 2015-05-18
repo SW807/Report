@@ -1,23 +1,4 @@
 %Til survey: Tilføj "huskekort" - som får patienten til at vykel en tur, yoga etc. - enten at appen selv finder ud af det eller at det er spykologen der løbende kan lægge dem ind.
-\section{Notifikationer}\bruno{Skal flyttes til fælles, fordi det handler mere om platform end om vores modul.}
-En naturlig udvikling af det udviklede survey modul ville være, i stedet for at indhente oplysninger fra brugeren, at præsentere dem.
-Altså at kunne notificere brugeren med information.
-Dette kunne enten ske på faste tidspunkter eller ved at et analyse modul registrerer en ændring i et af de monitorerede adfærdsmønstre.
-Ligeledes kan patienten modtage en status-notifikation, der fx kan beskrive en opsummering over hans sociale aktivitet målt over den seneste uge.
-
-\paragraph{Det udviklede modul}
-Survey modulet tillader at indsamle information fra brugeren via en række forskellige typer spørgsmål (se \cref{survey:spg}).
-Modulet fungerer herved som et sensor modul der anvender brugerens respons som dets input.
-Modulet adskiller sig dog fra andre sensor moduler idet det anvender en grafisk brugergrænseflade til at indsamle information.
-Givet relationen mellem de forskellige moduler (sensor-, analyse- og visningsmoduler) introducerer ovenstående en ny problemstilling.
-
-Da information kun kan overføres fra sensor til analyse og videre til visning, og ikke i den modsatte retning, vil notifikationer skulle implementeres som et visningsmodul.
-Kun på denne måde kan en notifikation præsentere information fra underliggende lag.
-Det betyder at notifikationer og spørgsmål vil skulle udvikles som to separate moduler.
-Modulerne kan defineres som en del af samme applikation for derved at kunne anvende samme kode-base, men vil i sidste ende skulle fungere som to moduler.
-
-Skulle man yderligere ønske at præsentere information i et spørgsmål ville det kræve en sammensmeltning af de to typer moduler.
-En sådan kombination af moduler er problematisk under den nuværende arkitektur, da den vil kræve både input og output i samme modul.
 
 \section{Forbedringer til 'Proof of Concept' - modulet}
 Under udviklingen af det nye modul har projektgruppen observeret en række problemstillinger.
@@ -87,3 +68,4 @@ sandsynligt at
 personen er med på
 at svare på spørgsmål?
 }
+\mikael{Passer det her ikke fint ind under 7.1.2 (Tidspunkt for spørgsmål)?}
