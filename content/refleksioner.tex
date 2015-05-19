@@ -12,21 +12,21 @@ Dog bør disse håndteres inden, eller som en del af, udførelse af eksperimente
 Det udviklede modul er bygget ud fra idéen om en relation mellem spørgsmål og svar.
 Det vil sige, at der for hvert spørgsmål forventes et svar.
 Dog er dette ikke nødvendigvis altid tilfældet.
-Antageligvis vil der opstå situationer hvor patienten ikke besvarer et spørgsmål, altså som det er nu vil det sige at patienten ikke vælger en svarmulighed eller skriver noget tekst og/eller ikke trykker 'ok'.
-En mulig årsag til dette kunne være, at patienten grundet depression ikke kan overskue at tage stilling til spørgsmål.
-Men også helt almindelige dagligdags situationer som fx. at have glemt telefonen hjemme, eller at den er løbet tør for strøm, kan resultere i at patienten ikke besvarer et spørgsmål.
+Antageligvis vil der opstå situationer hvor patienten ikke besvarer et spørgsmål.
+Altså som systemet er nu vil det sige at patienten ikke vælger en svarmulighed eller skriver noget tekst, og/eller ikke trykker 'ok'.
+En mulig årsag til dette kunne være at patienten grundet lavt stemningsleje ikke kan overskue at tage stilling til spørgsmål.
+Dog også mere almindelige situationer, som fx. at have glemt telefonen hjemme eller at den er løbet tør for strøm, kan resultere i at patienten ikke besvarer et spørgsmål.
 
-Det implementerede modul understøtter ikke indsamlingen af information om hvorvidt et spørgsmål er blevet besvaret eller ej.
-Det er en mulighed at besvarelser kan være en indikator på en ændring i adfærden, idet patienten pga. manglende overskud kan vælge ikke at besvare.
+Det implementerede modul understøtter ikke indsamlingen af meta-information om besvarelsen af spørgsmål, herunder om hvorvidt spørgsmålet overhovedet er blevet besvaret.
+Det er en mulighed at besvarelser, eller mangel på samme, kan være en indikator på en ændring i adfærden, idet patienten pga. manglende overskud kan vælge ikke at besvare.
 Det vil naturligvis være nødvendigt at foretage et eksperiment der kan afklare om dette er tilfældet.
 For at udføre dette eksperiment vil det være nødvendigt at lade systemet registrere hvilke spørgsmål der er besvaret, samt hvilke der ikke er det.
 
 \paragraph{Aktiv udsættelse af besvarelse}
 Som et led i understøttelsen af ovenstående vil det være fordelagtigt, at give patienten selv muligheden for at afvise at besvare et spørgsmål.
-Således kan det undersøges om patienten tager et aktivt fravalg af besvarelse, og yderlige kunne angives hvad grunden er for dette (ikke tid, ikke lyst, ved ikke).
-Det vil naturligvis ikke være endegyldigt, da et aktivt fravalg vil kunne opfattes passivt af mobiltelefonen.
-Patienten kan eksempelvis vælge slet ikke at reagere på en notifikation.
-\mikael{Forstår ikke de sidste 2 sætninger her}
+Således kan det noteres om patienten tager et aktivt fravalg af besvarelse, og yderlige kunne angives hvad grunden er for dette (ikke tid, ikke lyst, ved ikke).
+Det vil dog ikke dække alle situationer, da det også kunne forestilles at patienten vælger slet ikke at reagere på en notifikation.
+Her kunne det så vælges at automatisk fjerne spørgsmålet efter noget tid og notere at dette skete, dog kræver dette flere overvejelser, da patienten blot kunne være væk fra telefonen eller tager særligt lang tid om at svare.
 
 %Tilføj "Postpone"-knap så det er muligt at svare senere på spørgsmål
 Udover muligheden for at afvise spørgsmål, vil patienten i nogle situationer muligvis blot have brug for en udsættelse af spørgsmålet.
