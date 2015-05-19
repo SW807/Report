@@ -1,9 +1,8 @@
-\section{Survey - et modul til forstyrrende dataindsamling}
-For at kunne udlede en sammenhæng mellem stemningsleje og social aktivitet skal der udover målinger af den sociale aktivitet også bruges subjekt data fra patienten.
-Til dette formål skal der konstrueres et modul der kan stille spørgsmål til patienten på varierende tidspunkter.
-\mikael{Omformuler så 'subjektiv' ikke bruges}
+\chapter{Survey - et modul til forstyrrende dataindsamling}
+Kapitlet indeholder en beskrivelse af et modul kaldet 'survey', som visuelt præsenterer spørgsmål og gemmer de bruger-indtastede data.
+Modulets implementering er baseret på de behov der opsat i \cref{krav}.
 
-\subsection{Spørgsmål}\label{survey:spg}
+\section{Spørgsmål}\label{survey:spg}
 Da der er forskellige metoder til at konsultere en patient om sit stemningsleje er det nødvendigt at kunne stille spørgsmål på forskellige måder.
 Der er udvalgt tre typer spørgsmål som vi mener dækker de behov der i forhold til at udspørge patienten både om sin sociale færden og om sit stemningsleje.
 Disse typer vil i det følgende blive gennemgået med eksempler på hvilke relevante metoder fra psykologien de kan bruges til.
@@ -25,7 +24,7 @@ Dette besvares så på en skala fra et til fem.
 
 Vi har altså behov for et spørgsmål der kan besvares med en numerisk skala med mulighed for at sætte labels på skalaen.
 
-\subsection{Implementation af de forskellige typer svar\bruno{Eller spørgsmål - hvad vi nu finder ud af}}
+\section{Implementation af de forskellige typer spørgsmål}
 Gennem dette afsnit vil der blive refereret til \cref{stemreg::spoergsmaal}, som er en eksempel implementation af metoden: stemningsregistrering beskrevet i \cref{stemningsleje::stemningsregistrering}.
 De tre typer af spørgsmål, beskrevet i \cref{krav::typer}, er blevet implementeret, eksempler på brug kan ses på \cref{stemreg::spoergsmaal}.
 På \cref{stemreg::stemningsleje} kan ses en multiple choice spørgsmål hvor der kan vælges flere svarmuligheder.
@@ -58,7 +57,7 @@ Spørgsmålene har to labels et for minimum og et for maksimum.
 	\caption{Tre af de fem spørgsmål der bruges i metoden: stemningsregistrering( \cref{stemningsleje::stemningsregistrering}), for at vise de tre spørgsmåls typer.}\label{stemreg::spoergsmaal}
 \end{figure}
 
-\subsection{Scheduler}
+\section{Scheduler}
 For at kunne stille spørgsmål så fleksibelt som muligt er der blevet konstrueret en scheduler.
 Stemningsregistrering og dagbog skal ske én gang om dagen, mens PANAS spørgsmål sagtens kan spredes ud over dagen for at få et bredere billede af patientens tilstand.
 
