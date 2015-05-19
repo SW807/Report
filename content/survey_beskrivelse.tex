@@ -7,6 +7,7 @@ Modulets implementering er baseret på de behov der opsat i \cref{krav}.
 Gennem dette afsnit vil der blive refereret til \cref{stemreg::spoergsmaal}, som er en eksempel implementation af metoden  \emph{stemningsregistrering} beskrevet i \cref{stemningsleje::stemningsregistrering}.
 De tre typer af spørgsmål, beskrevet i \cref{krav::typer}, er blevet implementeret.
 Eksempler på brug kan ses på \cref{stemreg::spoergsmaal}.
+
 På \cref{stemreg::stemningsleje} kan ses en multiple choice spørgsmål hvor der kan vælges flere svarmuligheder.
 Dette spørgsmål findes også i en variant hvor man kun kan vælge en mulighed, indikeret ved runde svarbokse (radio buttons).
 
@@ -15,7 +16,8 @@ Spørgsmålene har to labels et for minimum og et for maksimum, samt en indikato
 
 \Cref{stemreg::notater_vaegt} viser et spørgsmål der skal besvares ved en tekst. 
 
-
+Til det visuelle er der brugt standard dialoger fra Android biblioteket.\cite{android_dialogs}
+	
 \begin{figure}
 	\centering
 	\begin{subfigure}[b]{0.45\textwidth}
@@ -54,6 +56,7 @@ Eksempler på disse notifikationer kan ses på \cref{noti}.
 \end{figure}
 
 Når der trykkes på notifikationen dukker spørgsmålet op i en dialogboks hvor patientes svar kan indføres.
+Til det visuelle er der brugt standard notifikationer fra Android biblioteket.\cite{android_notifications}
 
 For at gøre systemet endnu mere fleksibelt skal der være mulighed for at kunne udskyde et spørgsmål.
 På denne måde har patienten fuld kontrol over hvornår han svarer, uden at være nødt til at skulle afbryde det han er i gang med.
