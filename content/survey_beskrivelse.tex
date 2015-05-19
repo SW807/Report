@@ -1,10 +1,8 @@
-\section{Survey - et modul til forstyrrende dataindsamling}
-For at kunne udlede en sammenhæng mellem stemningsleje og social aktivitet skal der udover målinger af den sociale aktivitet også bruges forstyrrende indsamlet data fra patienten.
-Til dette formål skal der konstrueres et modul der kan stille spørgsmål til patienten på varierende tidspunkter.
-I \cref{krav::typer} blev de nødvendige spørgsmålstyper udledt fra den relevante forskning undersøgt i \cref{maaling_af_stemningsleje}.
-Implementationen af disse vil blive beskrevet i det følgende.
+\chapter{Survey - et modul til forstyrrende dataindsamling}\label{survey}
+Kapitlet indeholder en beskrivelse af et modul kaldet 'survey', som visuelt præsenterer spørgsmål og gemmer de bruger-indtastede data.
+Modulets implementering er baseret på de behov der opsat i \cref{krav}.
 
-\subsection{Implementation af spørgsmålstyper}
+\section{Implementation af spørgsmålstyper}\label{survey:spg}
 \stefan{debat: spørgsmålstyper, svartyper, noget tredje?}
 Gennem dette afsnit vil der blive refereret til \cref{stemreg::spoergsmaal}, som er en eksempel implementation af metoden  \emph{stemningsregistrering} beskrevet i \cref{stemningsleje::stemningsregistrering}.
 De tre typer af spørgsmål, beskrevet i \cref{krav::typer}, er blevet implementeret.
@@ -39,7 +37,7 @@ Spørgsmålene har to labels et for minimum og et for maksimum, samt en indikato
 	\caption{Tre af de fem spørgsmål der bruges i metoden: stemningsregistrering( \cref{stemningsleje::stemningsregistrering}), for at vise de tre spørgsmåls typer.}\label{stemreg::spoergsmaal}
 \end{figure}
 
-\subsection{Scheduler}
+\section{Scheduler}
 For at kunne stille spørgsmål så fleksibelt som muligt er der blevet konstrueret en scheduler.
 Stemningsregistrering og dagbog skal ske én gang om dagen, mens PANAS spørgsmål sagtens kan spredes ud over dagen for at få et bredere billede af patientens tilstand.
 

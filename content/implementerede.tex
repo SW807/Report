@@ -1,4 +1,4 @@
-\section{Implementerede Moduler}
+\chapter{Implementerede moduler}
 I \cref{datasamling} blev en række mulige datakilder beskrevet for at klargøre de muligheder projektgruppen så for indsamling af information der relaterer sig til en patients sociale aktivitet.
 Af disse muligheder er indsamlingen af opkalds-oplysninger og meta information om sms og mms beskeder blevet implementeret som sensor-moduler.
 Disse er udvalgt, da de repræsenterer den traditionelle brug af en mobiltelefon samt en simpel tilgang til informationen.
@@ -15,7 +15,7 @@ De to moduler, det data de hver indsamler, samt deres repræsentation af dette d
 %opkald
 %sms/mms
 
-\subsection{Opkald}
+\section{Opkald}
 Ud fra beskrivelsen givet i \cref{datasamling:opkald}, er der ikke mange muligheder for indsamling af data for opkald.
 Alt nødvendig information opbevares af Android i en enkelt database tabel.
 Der kan dermed foretages en direkte mapping fra denne tabel, til modulets egen tabel, ved blot at kopiere de aktuelle informationer.
@@ -36,7 +36,7 @@ Det bliver altså på denne måde muligt at styre hvor længe informationen skal
 
 \input{content/modul_definitioner/calls}
 
-\subsection{SMS/MMS beskeder}
+\section{SMS/MMS beskeder}
 \mikkel{SMS eller sms?}
 For SMS beskeder er proceduren for indlæsning af information næsten lige så triviel som for opkald.
 Den eneste forskel er at beskederne er organiseret i mere end en tabel.
