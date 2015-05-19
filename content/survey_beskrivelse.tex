@@ -1,38 +1,19 @@
 \section{Survey - et modul til forstyrrende dataindsamling}
-For at kunne udlede en sammenhæng mellem stemningsleje og social aktivitet skal der udover målinger af den sociale aktivitet også bruges subjekt data fra patienten.
+For at kunne udlede en sammenhæng mellem stemningsleje og social aktivitet skal der udover målinger af den sociale aktivitet også bruges forstyrrende indsamlet data fra patienten.
 Til dette formål skal der konstrueres et modul der kan stille spørgsmål til patienten på varierende tidspunkter.
-\mikael{Omformuler så 'subjektiv' ikke bruges}
+I \cref{krav::typer} blev de nødvendige spørgsmålstyper udledt fra den relevante forskning undersøgt i \cref{maaling_af_stemningsleje}.
+Implementationen af disse vil blive beskrevet i det følgende.
 
-\subsection{Spørgsmål}\label{survey:spg}
-Da der er forskellige metoder til at konsultere en patient om sit stemningsleje er det nødvendigt at kunne stille spørgsmål på forskellige måder.
-Der er udvalgt tre typer spørgsmål som vi mener dækker de behov der i forhold til at udspørge patienten både om sin sociale færden og om sit stemningsleje.
-Disse typer vil i det følgende blive gennemgået med eksempler på hvilke relevante metoder fra psykologien de kan bruges til.
-
-\paragraph{Multiple choice}
-Stemningsregistrering, \cref{stemningsleje::stemningsregistrering}, bruger en skala fra ``svær depression'' til ``svær mani'' til at holde øje med hvor patientens stemningsleje.
-Det skal både være muligt at lave spørgsmål hvor man kun kan vælge en mulighed og spørgsmål hvor man kan vælge flere svarmuligheder.
-Jævnfør stemningregistrering skalaen skal der kunne tilknyttes en farve til de forkellige muligheder.
-
-\stefan{Hamilton}
-
-\paragraph{Tekst}
-For at give mulighed for at patienten kan skrive dagbog \stefan{ref til Måling af stemningsleje} skal der bruges en spørgsmålstype der kan vise en kort tekst som besvares med en tekst fra et tekstfelt.
-På denne måde kan der både skrives regulær dagbog, og der kan stilles konkrete spørgsmål såsom ``Hvordan har du ageret socialt i dag?''.
-
-\paragraph{Skala}
-I metoden PANAS \stefan{ref til Måling af stemningsleje}stilles patienten et spørgsmål om i hvor høj grad han har følt en bestemt følelse i en vis tidsperiode.
-Dette besvares så på en skala fra et til fem.
-
-Vi har altså behov for et spørgsmål der kan besvares med en numerisk skala med mulighed for at sætte labels på skalaen.
-
-\subsection{Implementation af de forskellige typer svar\bruno{Eller spørgsmål - hvad vi nu finder ud af}}
-Gennem dette afsnit vil der blive refereret til \cref{stemreg::spoergsmaal}, som er en eksempel implementation af metoden: stemningsregistrering beskrevet i \cref{stemningsleje::stemningsregistrering}.
-De tre typer af spørgsmål, beskrevet i \cref{krav::typer}, er blevet implementeret, eksempler på brug kan ses på \cref{stemreg::spoergsmaal}.
+\subsection{Implementation af spørgsmålstyper}
+\stefan{debat: spørgsmålstyper, svartyper, noget tredje?}
+Gennem dette afsnit vil der blive refereret til \cref{stemreg::spoergsmaal}, som er en eksempel implementation af metoden  \emph{stemningsregistrering} beskrevet i \cref{stemningsleje::stemningsregistrering}.
+De tre typer af spørgsmål, beskrevet i \cref{krav::typer}, er blevet implementeret.
+Eksempler på brug kan ses på \cref{stemreg::spoergsmaal}.
 På \cref{stemreg::stemningsleje} kan ses en multiple choice spørgsmål hvor der kan vælges flere svarmuligheder.
 Dette spørgsmål findes også i en variant hvor man kun kan vælge en mulighed, indikeret ved runde svarbokse (radio buttons).
 
 \Cref{stemreg::soevn} viser et spørgsmål der besvares ved en skala. 
-Spørgsmålene har to labels et for minimum og et for maksimum.
+Spørgsmålene har to labels et for minimum og et for maksimum, samt en indikator der viser den valgte værdi.
 
 \Cref{stemreg::notater_vaegt} viser et spørgsmål der skal besvares ved en tekst. 
 
