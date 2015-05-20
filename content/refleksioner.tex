@@ -10,7 +10,7 @@ Problemstillingerne hindrer ikke brugen af modulet, idet kernefunktionaliteten e
 Dog bør de håndteres inden udførelse af eksperimenter med modulet.
 
 %Holde styr på om man svarer på spørgsmål
-\subsection{Manglende besvarelser}
+\subsection{Manglende besvarelser}\label{reflection:manglende}
 Det udviklede modul er bygget ud fra idéen om en relation mellem spørgsmål og svar.
 Det vil sige, at der for hvert spørgsmål forventes et svar.
 Dog er dette ikke nødvendigvis altid tilfældet.
@@ -84,18 +84,26 @@ På den måde kan den enkelte patients sygdom elimineres som fejlkilde.
 Det skal dog bemærkes, at dette kun er tilfældet hvis den beskrevne sammenhæng eksisterer.
 
 \subsection{Validitet af data}
-Når der er indsamlet noget data, er der en række ting der kan overvejes omkring validiteten af denne.
+Som nævnt er det relevant at vurdere de forskellige datakilder, før de kan anvendes i sammenligning med andre datakilder.
 
-Den overordnede brugbarhed kan overvejes, her tænkes om dataet er dækkende, altså om hvorvidt der er huller, som fx. ved lokation data hvor der kan opstå huller ved dårlig eller ingen GPS/mobil dækning.
-Her kan det så overvejes om disse huller kan lappes ved at supplere med data fra anden kilde.
+Pålideligheden af en kilde kan vurderes ved at undersøge hvorvidt kilden kun leverer delvis/mangelfuld information og om den er afhængig af eksterne kilder eller hardware.
+Eksempelvis har GPS ingen mangelfuld information, da systemet kan anvendes overalt.
+Det har derimod en afhængighed af ekstern hardware, i form a satellitter.
+I modsætning er bruger input ikke afhængig af anden hardware (udover patienten selv), men her kan informationen være mangelfuld (se reflection:manglende).
 
-De individuelle data kilder kan også holdes op imod hinanden, for at afgøre om de er enige eller uenige.
+I nogle tilfælde vil det være muligt at undgå disse hindringer ved at supplere med data fra anden kilde.
 
+For mange datakilder vil både præcision og frekvens være oplyste fra producenten.
+Alternativt kan der nemt opstilles eksperimenter der vurderer disse, givet at der findes en måde at måle præcisionen af data fra en kilde.
+Eksempelvis kan præcisionen af GPS måles ved afstanden mellem to returnerede punkter og den faktiske afstand mellem dem.
+Nogle kilder kan ikke vurderes på denne måde, som beskrevet i \cref{reflection:valid_resultater}.
+
+\paragraph{Manglende data}
 Der er også sværere overvejelser, som hvordan man kan konkludere på det indsamlede data.
 Ved store perioder uden ny data, for eksempel ingen nye opkald eller SMSer, vil dette ikke nødvendigvis betyde at brugeren har isoleret sig, men blot at mobiltelefonen er glemt hjemme eller løbet tør for strøm.
 For at øge præcisionen af brugen af denne data, kunne det være nødvendigt at supplere med andre ikke-relaterede datakilder (fx. lokation og accelerometer til at sige noget om sandsynligheden for at mobilen er på personen).
 
-\subsection{Validering af resultater}
+\subsection{Validering af resultater}\label{reflection:valid_resultater}
 %ref til gruppeinterview ifm. interesse i egen forbedring
 Dette afsnit beskæftiger sig med overvejelser vedr. validering af data fra udførte eksperimenter.
 Her tages der udgangspunkt i et tænkt eksempel på et eksperiment, hvor der løbende indsamles information om SMS (se \cref{implementerede_moduler:smsmms}) og flere gange dagligt laves forespørgsler baseret på PANAS (se \cref{PANAS}).
