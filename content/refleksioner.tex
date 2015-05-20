@@ -57,34 +57,37 @@ Fx. relationen mellem stemningsleje og størrelsen af en patients sociale netvæ
 
 Her vil blive diskuteret overvejelser der kan gøres omkring eksperimentering, og til sidst forslag til brug udenfor eksperimentel kontekst.
 
-\subsection{Sammenligning på tværs af sygdomme}
+\subsection{Sammenligning på tværs af sygdomme}\label{refleksion:tvaers_af_sygdomme}
 Ud over en generel forbindelse mellem stemningsleje og social aktivitet, kunne der også lægges vægt på bestemte sygdomme.
-
-Som udgangspunkt er målgruppen for dette projekt patienter diagnosticeret med unipolar eller bipolar affektiv lidelse.
-Dog kunne andre interessante sygdomme være stress og lettere depressioner.
-Det kunne også være interessant at nærmere undersøge de forskellige typer af affektive lidelser på tværs, for at finde en generel forbindelse, der kunne bruges til lettere at danne model for den enkelte patient.
-Dette vil kræve eksperimenter med patienter diagnosticeret med en af de førnævnte lidelser, samt viden om hvorvidt patienten er før/under/efter en periode.
+Som udgangspunkt er målgruppen for dette projekt patienter diagnosticeret med en unipolar eller bipolar affektiv lidelse.
+Dog kunne patienter, diagnosticeret med stress og lettere depressioner, ligeledes være interessante for projektet.
 
 Ved at tage en større gruppe af patienter med samme sygdom, kunne den indsamlede data sammenlignes på tværs af disse.
 Hvis dette samtidig gøres for flere forskellige sygdomme, kan disse sammenlignes på tværs.
-Når man så opnår et resultat, kan det vurderes om en diagnose er en brugbar faktor når der skal dannes model for den enkelte patient.
+Med dette resultat, kan det vurderes om en diagnose er en brugbar faktor når der skal dannes model for den enkelte patient.
 
 \subsection{Sammenligning på tværs af sensorer/analyser}
 Ligesom sammenligning på tværs af sygdomme, kunne det være interessant at eksperimentere med brug af flere forskellige sensorer og/eller analyser.
+På denne måde kan den enkelte sensor evalueres i relation til andre lignende sensorer.
+Her kunne det være interessant at vurdere pålideligheden af informationen fra sensoren, præcisionen samt frekvensen af data.
 
-På denne måde kan den enkelte sensor evalueres individuelt.
-For analyser, som nok vil være en form for fusion af sensorer, samt manipulation af disses input, vil dette være en smule mere avanceret.
-Dog vil man på samme måde kunne evaluere den individuelle analyse.
+For analyser, især de der fusionerer sensorer, samt manipulation af deres input, vil evaluering være mere kompleks.
+Både på grund af afhængigheden af data-kilder (sensorer og andre analyser) og på grund af kompleksiteten forbundet med data-manipulation kontra data-indsamling.
+Dog vil man kunne evaluere analyser på samme måde som sensorer.
 
-Det største problem med denne form sammenligning er at det indsamlet sensor/analyse data skal kunne holdes op mod noget der afspejler virkeligheden, for at kunne sige i hvor høj grad dataet afspejler virkeligheden.
-Samtidig, med antagelsen fra før om at der kan være sammenhæng mellem patienter, med samme sygdom, og deres relation mellem stemningsleje og social aktivitet, bliver man nødt til at eliminere denne faktor.
-Dette fører til næste punkt.
+Det største problem med denne form for sammenligning er at det indsamlede sensor/analyse data skal evalueres i forhold til de tre kriterier; pålidelighed, præcision og frekvens.
+Altså sensorens/analysens evne til at \textit{afspejle virkeligheden}.
+Denne vurdering må foretages på basis af det enkelte modul, da typen af data varierer meget fra modul til modul.
+
+Med antagelsen om en sammenhæng mellem patienter, med samme sygdom (se \cref{refleksion:tvaers_af_sygdomme}), vil en sammenligning af moduler kunne udføres på baggrund af bestemte sygdomme.
+På den måde kan den enkelte patients sygdom elimineres som fejlkilde.
+Det skal dog bemærkes, at dette kun er tilfældet hvis den beskrevne sammenhæng eksisterer.
 
 \subsection{Validering af resultater}
 %ref til gruppeinterview ifm. interesse i egen forbedring
 Efter et eksperiment er udført og der er kommet frem til nogle resultater, er der stadig nogle overvejelser ift. metode, navnligt validering af resultater.
 
-Eksempelvis, hvis vi antager at der er udført et eksperiment hvor der indsamles løbende SMS og opkald meta-data, samt flere daglige forespørgsler baseret på PANAS.
+Hvis vi antager at der er udført et eksperiment hvor der løbende indsamles SMS og opkald meta-data, samt flere daglige forespørgsler baseret på PANAS.
 Hvis det vurderes at der er en god sammenhæng mellem de to dataindsamlinger over tid, skal det vurderes hvorvidt dette resultat er sandfærdigt.
 Hvis formålet er at vurdere om hvorvidt SMS og opkald er gode kilder til at sige noget om social aktivitet, skal de holdes op imod noget der sandfærdigt siger noget om patientens aktuelle sociale aktivitet (ground truth).
 Dette er dog ikke helt lige til, da det tidligere er vurderet at det ikke er muligt at få helt objektive besvarelser, se \cref{begreber::forstyrrende}.
