@@ -1,22 +1,27 @@
 \chapter{Opsamling}
-I dette projekt er der blevet gjort klar til indsamling af ikke-forstyrrende\footnote{For definition se \cref{begreber::ikke_forstyrrende}} og forstyrrende\footnote{For definition se \cref{begreber::forstyrrende}} data. 
-Dette er for at udføre et eller flere eksperimenter, som ser på om der er en sammenhæng mellem ikke-forstyrrende indsamlet data og forstyrrende indsamlet data.\bruno{link til hvor vi har beskrevet denne problemstilling - hvis vi har det - ellers skal vi nok have det et sted i starten}
+I dette projekt er der blevet gjort klar til indsamling af  forstyrrende\footnote{For definition se \cref{begreber::forstyrrende}} og ikke-forstyrrende\footnote{For definition se \cref{begreber::ikke_forstyrrende}} data. 
+
+Som nævnt i introduktionen blev disse to indsamlingsmetoder udarbejdet for at udføre et eller flere eksperimenter, som ser på om der er en sammenhæng mellem ikke-forstyrrende indsamlet data og forstyrrende indsamlet data.\bruno{link til hvor vi har beskrevet denne problemstilling - hvis vi har det - ellers skal vi nok have det et sted i starten}
+\stefan{lige nu står det kun i intro, jeg tror måske vi skal have et afsnit der snakker mere eksplicit om det} \mikael{Jeg synes det giver god mening med et afsnit om dette, en slags 'problemformulering' som måske endda kan konkluderes på.}
 
 \paragraph{Ikke-forstyrrende}
 I \cref{ikke_forstyrrende} er de mulige ikke-forstyrrende datakilder analyseret, beskrevet i \cref{datasamling}.
-Desuden er to udvalgte blevet implementeret, beskrevet i \cref{implementerede_moduler}.
-De to moduler gør det muligt at indsamle ikke-forstyrrende data fra patienten.
+Desuden er to udvalgte blevet implementeret, opkaldsinformation og SMS/MMS information.
+Dette er blevet beskrevet i \cref{implementerede_moduler}.
+De to moduler gør det muligt at indsamle ikke-forstyrrende data fra patienten som vil udgøre den ene del af eksperimentets data.
 
 \paragraph{Forstyrrende}
 I \cref{forstyrrende} er der blevet kigget på forstyrrende indsamling af data.
 Der er i \cref{maaling_af_stemningsleje} fundet frem til tre \textit{spørgeskemaer} som har lagt op til nogle behov, beskrevet i \cref{krav}.
 Disse behov har været grundstenen for det implementerede modul 'survey', beskrevet i \cref{survey}.
-Modulet gør det muligt at indsamle forstyrrende data fra patienten omkring hans psykiske tilstand.
+Modulet gør det muligt at indsamle forstyrrende data fra patienten omkring hans stemningsleje.
+Dette vil udgøre den anden del af det indsamlede data der skal sammenlignes i eksperimentet.
 
 \paragraph{Indsamling af data}
-Ved at samle data ind vha. 'survey'-modulet findes patientens psykiske tilstand.
+Ved at samle data ind vha. 'survey'-modulet findes patientens stemningsleje.
 Sideløbende skal de ikke-forstyrrende dataindsamlings-moduler også indsamle data.
-Det er så muligt at sammenligne data og sige noget om de ikke-forstyrrende data
+Det er så muligt at sammenligne data og sige noget om de ikke-forstyrrende data.
 
-
-\bruno{Fortæl om kombinationen af survey og (opkald og sms) - hordan det gør klar til dataindsamling - så man kan udføre et eksperiment}
+Vi kan ikke på nuværende tidspunkt sige om der er en tydelig sammenhæng mellem de to datakilder. 
+Ønsket er at kunne konstruere en model, på baggrund af et eksperiment eller flere eksperimenter.
+Modellen skal ud fra ikke-forstyrrende indsamlet data om patientens sociale aktivitet kunne give et bud på patientens stemningsleje.\bruno{Disse tre sætninger måske bare refleksion? Eller måske gøre klar til det her i det nye afsnit 'problemformulering'.}
