@@ -1,4 +1,20 @@
-\chapter{Psykiatrisk forskning}\label{problem}\mikkel{Jeg synes ikke vi skal bruge 'Problemformulering' som titel på afsnittet... :P}
+\chapter{Psykiatrisk forskning}\label{problem}
+For at muliggøre forskning i relationen mellem patientens stemningsleje og social aktivitet er det nødvendigt at indsamle informationer til disse to aspekter.
+Den grundlæggende platform muliggør implementationen af data moduler \citefaelles{4.3.3 Moduler} til at foretage denne indsamling af informationer.
+Dermed ønskes en implementation af et eller flere moduler der indikerer social aktivitet og stemningsleje.
+
+Modulerne til monitorering af social aktivitet kunne implementeres som analyse moduler, der opsummerer data fra flere kilder, for derved at give et håndgribeligt billede af en patients sociale aktivitet.
+Men da der også i forhold til relationen mellem brug af mobiltelefon og social aktivitet er tale om grundlæggende forskning, foretages i stedet udelukkende implementationer af data moduler.
+Herved gøres der ingen antagelser om hvilke typer information er de mest relevante i forskningsøjemed.
+Dog vælges det, af tidshensyn, at kun få moduler implementeres.
+Disse er beskrevet i \cref{implementerede_moduler}.
+
+Som kilde til bestemmelse af en patients stemningsleje ønskes det at benytte en automatiseret vurdering baseret på patientens besvarelse af en mængde spørgsmål.
+Hvilke spørgsmål der præcis bør anvendes er uvist.
+I \cref{maaling_af_stemningsleje} gennemgås en række metoder der danner grundlag for hvilke typer spørgsmål der bør understøttes.
+På denne måde kan eksisterende viden om indsamling af stemningsleje overføres til det nye system.
+
+
 For at kunne foretage denne indsamling af data, implementeres et modul på den eksisterende platform \citefaelles{} der tillader at forespørge den enkelte patient om dennes stemningsleje.
 Modulet søges så fleksibelt at det vil kunne understøtte forskellige spørgsmål og dermed undersøgelse af relation mellem en række problemstillinger.
 
