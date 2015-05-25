@@ -18,7 +18,8 @@ Dog er dette ikke nødvendigvis altid tilfældet.
 Antageligvis vil der opstå situationer hvor patienten ikke besvarer et spørgsmål.
 Altså som systemet er nu vil det sige at patienten ikke vælger en svarmulighed eller skriver noget tekst, og/eller ikke trykker 'ok'.
 En mulig årsag til dette kunne være at patienten grundet lavt stemningsleje ikke kan overskue at tage stilling til spørgsmål.
-Dog også mere almindelige situationer, som fx. at have glemt telefonen hjemme eller at den er løbet tør for strøm, kan resultere i at patienten ikke besvarer et spørgsmål.
+Ligeledes kan mere almindelige situationer resultere i at patienten ikke besvarer et spørgsmål.
+Eksempelvis kan han have efterladt telefonen hjemme eller den kan være løbet tør for strøm.
 
 Det implementerede modul understøtter ikke indsamlingen af meta-information om besvarelsen af spørgsmål, herunder om hvorvidt spørgsmålet overhovedet er blevet besvaret.
 Det er en mulighed at besvarelser, eller mangel på samme, kan være en indikator på en ændring i adfærden, idet patienten pga. manglende overskud kan vælge ikke at besvare.
@@ -55,7 +56,7 @@ For PANAS kunne dette være at, hvis der stilles spørgsmål i grupper af 4, at 
 
 %GUI skal forbedres meget - fordi det ikke har været i fokus
 \subsection{Brugergrænseflade}
-Som nævnt i \cref{survey} bruger survey standard komponenter fra Android-bibilioteket til brugergrænsefladen.
+Som nævnt i \cref{survey} bruger surveymodulet standard komponenter fra Android-bibilioteket til brugergrænsefladen.
 Brugergrænsefladen er ikke blevet testet fordi den ikke har været i fokus.
 Den skal testes for brugervenlighed, da dette ikke er blevet gjort fx vha. en test i usability-lab.
 Her kan eksempelvis bruges \emph{Instant Data Analysis}, som er beskrevet i \citet{IDA}
@@ -67,37 +68,44 @@ Her kan eksempelvis bruges \emph{Instant Data Analysis}, som er beskrevet i \cit
 Forståelsen af relationen mellem patientens adfærd, stemningsleje og interaktion med mobiltelefon er stadig uklar.
 Dette projekt lægger op til en række eksperimenter der kan være med til at afklare nogle af disse relationer.
 Eksempelvis betydningen af patientens digitale sociale interaktion i forhold til stemningsleje.
-Nogle af disse eksperimenter vil kunne udføres simultant, i form af dataindsamlingen.
-Efter en periode med indsamling af data, vil det være muligt at begynde at lede efter sammenhænge i det indsamlede data.
+
+Dataindsamlingen til nogle af disse eksperimenter vil kunne udføres simultant.
+Enten fordi samme data anvendes til flere eksperimenter eller fordi to kilder er hinanden uafhængige.
+Eksempelvis er indsamlingen af oplysninger om sms uafhængig af oplysninger om opkald.
+Bemærk at brugerens brug af kilder (eksempelvis sms og opkald) ikke nødvendigvis deler samme uafhængighed.
+Altså kunne flere afsendte sms beskeder muligvis resultere i et fald i antallet af opkald.
+
+Efter en periode med indsamling af data, vil det være muligt at begynde at lede efter sammenhænge i den mængde data der er blevet indsamlet.
 Fx. relationen mellem stemningsleje og størrelsen af en patients sociale netværk før, under og efter en depression eller manisk periode.
 
-Her vil blive diskuteret overvejelser der kan gøres omkring eksperimentering, og til sidst forslag til brug udenfor eksperimentel kontekst.
+I de følgende afsnit diskuteres overvejelser der bør inddrages i forbindelse med udførelse af eksperimenter samt forslag til brug udenfor eksperimentel kontekst.
 
 \subsection{Sammenligning på tværs af sygdomme}\label{refleksion:tvaers_af_sygdomme}
 Ud over en generel forbindelse mellem stemningsleje og social aktivitet, kunne der også lægges vægt på bestemte sygdomme.
 Som udgangspunkt er målgruppen for dette projekt patienter diagnosticeret med en unipolar eller bipolar affektiv lidelse.
 Dog kunne patienter, diagnosticeret med stress og lettere depressioner, ligeledes være interessante for projektet.
 
-Ved at tage en større gruppe af patienter med samme sygdom, kunne den indsamlede data sammenlignes på tværs af disse.
+Ved at tage en større gruppe af patienter med samme sygdom, kunne indsamlet data sammenlignes på tværs af disse.
 Hvis dette samtidig gøres for flere forskellige sygdomme, kan disse sammenlignes på tværs.
-Med dette resultat, kan det vurderes om en diagnose er en brugbar faktor når der skal dannes model for den enkelte patient.
+På denne måde vil det være muligt at opbygge en model for hver sygdom, eller muligvis blot konstatere at en model ikke kan konstrueres ud fra den mængde data der er blevet indsamlet.
+En sådan model vil kunne sammenholdes med den enkelte patient for derved at vurdere om hans adfærd er \textit{normal} for hans patientgruppe.
 
 \subsection{Sammenligning på tværs af sensorer/analyser}
 Ligesom sammenligning på tværs af sygdomme, kunne det være interessant at eksperimentere med brug af flere forskellige sensorer og/eller analyser.
 På denne måde kan den enkelte sensor evalueres i relation til andre lignende sensorer.
-Her kunne det være interessant at vurdere pålideligheden af informationen fra sensoren, præcisionen samt frekvensen af data.
+Altså kunne der eksempelvis laves et modul til bestemmelse af lokation baseret på GPS og et tilsvarende baseret på WiFi.
+For disse kan det eksempelvis undersøges hvilken af de to der angiver den mest præcise lokation.
+Ligeledes bør det undersøges hvilken data-kilde der mest pålideligt udtaler sig om en patients sociale aktivitet.
+Generelt er det interessant at vurdere pålideligheden af informationen fra moduler, præcisionen samt frekvensen af data.
 
-For analyser, især de der fusionerer sensorer, samt manipulation af deres input, vil evaluering være mere kompleks.
-Både på grund af afhængigheden af data-kilder (sensorer og andre analyser) og på grund af kompleksiteten forbundet med data-manipulation kontra data-indsamling.
-Dog vil man kunne evaluere analyser på samme måde som sensorer.
+Ved sammenligning af to moduler vil den manipulation af data der foretages af modulet påvirke resultatet af en sammenligning af to moduler.
+Det antages at et analyse modul typisk vil foretage mere manipulation af data end et data modul.
+Eksempelvis kan et analyse modul være et der samler informationer fra flere kilder og giver et samlet resultat.
+Et eksempel på et sådan modul kunne være et der aflæser informationer fra de to implementerede ikke-forstyrrende moduler (se \cref{implementerede_moduler}) og kombinerer dem til en samlet vurdering af social aktivitet.
 
 Det største problem med denne form for sammenligning er at det indsamlede sensor/analyse data skal evalueres i forhold til de tre kriterier; pålidelighed, præcision og frekvens.
 Altså sensorens/analysens evne til at \textit{afspejle virkeligheden}.
 Denne vurdering må foretages på basis af det enkelte modul, da typen af data varierer meget fra modul til modul.
-
-Med antagelsen om en sammenhæng mellem patienter, med samme sygdom (se \cref{refleksion:tvaers_af_sygdomme}), vil en sammenligning af moduler kunne udføres på baggrund af bestemte sygdomme.
-På den måde kan den enkelte patients sygdom elimineres som fejlkilde.
-Det skal dog bemærkes, at dette kun er tilfældet hvis den beskrevne sammenhæng eksisterer.
 
 \subsection{Validitet af data}
 Som nævnt er det relevant at vurdere de forskellige datakilder, før de kan anvendes i sammenligning med andre datakilder.
