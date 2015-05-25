@@ -1,4 +1,5 @@
 %Til survey: Tilføj "huskekort" - som får patienten til at vykel en tur, yoga etc. - enten at appen selv finder ud af det eller at det er spykologen der løbende kan lægge dem ind.
+\label{refleksion}
 
 \bruno{Split måske i diskussio  og refleksion}
 
@@ -36,18 +37,21 @@ Med denne mulighed kan der \textit{muligvis} indsamles mere information end ved 
 Hvorvidt dette faktisk er tilfældet kan undersøges ved at stille funktionaliteten til rådighed for patienten.
 
 %Mere dynamisk styring af hvad tidspunkt spoergsmaal bliver vist paa
-\subsection{Tidspunkt for spørgsmål}
-I \cref{tidspnkforspg} blev det overvejet hvilke overvejelser der er gjort i forhold til hvornår spørgsmål bliver stillet.
-Da der er mange spørgsmål at stille fra de omtalte metoder er det vigtigt at overveje hvordan man undgår at overdynge patienten med dem alle på en gang.
-Det implementerede system tillader kun begrænset tilpasning af hvornår spørgsmål bliver stillet - tidspunkter på dagen og i intervaller.
-
+\subsection{Tidspunkt for spørgsmål}\label{refleksion:tidspunkt}
+I \cref{tidspnkforspg} blev der præsenteret nogle overvejelser der er gjort i forhold til hvornår spørgsmål bliver stillet.
+Da der er mange spørgsmål at stille fra de omtalte metoder (se \cref{datasamling}) er det vigtigt at overveje hvordan man undgår at overdænge patienten med dem alle på én gang.
+Det implementerede system tillader kun begrænset tilpasning af hvornår spørgsmål bliver stillet - tidspunkt på dagen og størrelse på interval.
 En mere dynamisk løsning vil være at gruppere spørgsmål og gøre det muligt at indstille hvordan og hvornår denne gruppe spørgsmål skal stilles til patienten.
-Indstillingsmuligheder for en gruppe kunne være foretage en \emph{reduktion} i antallet af samtidige spørgsmål.
-Dette vil sige at der er et maksimalt antal af spørgsmål der skal blive stillet over en bestemt tidsperiode.
+
+Indstillingsmuligheder for en gruppe af spørgsmål kunne være foretage en \emph{reduktion} i antallet af samtidige spørgsmål.
+Dette vil sige at der er et maksimalt antal af spørgsmål der skal blive stillet over en bestemt tidsperiode, eller på samme tidspunkt.
+Grunden til at foretage denne reduktion i spørgsmål er at patienten kunne lave forhastede besvarelser, hvis der stilles for mange spørgsmål og for ofte.
+Eksempelvis kunne man for PANAS vælge maksimalt at stille 4 spørgsmål på én gang, samt at hvert spørgsmål kun stilles én gang pr. dag.
 
 Da det stadig ønskes at patienten besvarer samtlige spørgsmål, kan der derudover foretages en \emph{variation} over de benyttede spørgsmål.
-Det skal altså kunne indstilles hvor ofte et spørgsmål mindst skal stilles for at informationen er brugbar.
-\stefan{jeg har skrevet sjove ting, læs det lige igennem}
+Hvis patienten dagligt får de samme spørgsmål, i samme rækkefølge, kunne dette lede til rutineprægede besvarelser.
+Der skal altså være enten en tilfældig eller justerbar variation i de spørgsmål der stilles.
+For PANAS kunne dette være at, hvis der stilles spørgsmål i grupper af 4, at disse grupper er tilfældigt dannet, eller at de 4 spørgsmål bliver stillet i tilfældig rækkefølge.
 
 %GUI skal forbedres meget - fordi det ikke har været i fokus
 \subsection{Brugergrænseflade}
@@ -59,7 +63,7 @@ Her kan eksempelvis bruges \emph{Instant Data Analysis}, som er beskrevet i \cit
 \mikkelin{Jeg ved ikke hvad jeg skal skrive om ''GUI skal forbedres meget''. Det virker nemt som en standard ting at sige.}
 
 %Anvendelse (model/eksperimentering)
-\section{Usikkerheder og eksperimenter}
+\section{Usikkerheder og eksperimenter}\label{refleksion:usikkerhed}
 Forståelsen af relationen mellem patientens adfærd, stemningsleje og interaktion med mobiltelefon er stadig uklar.
 Dette projekt lægger op til en række eksperimenter der kan være med til at afklare nogle af disse relationer.
 Eksempelvis betydningen af patientens digitale sociale interaktion i forhold til stemningsleje.

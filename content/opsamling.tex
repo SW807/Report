@@ -1,26 +1,53 @@
 \chapter{Opsamling}
-I dette projekt er der blevet gjort klar til indsamling af forstyrrende\footnote{For definition se \cref{begreber::forstyrrende}} og ikke-forstyrrende\footnote{For definition se \cref{begreber::ikke_forstyrrende}} data. 
+Dette projekt har søgt at etablere en platform til udførelse af eksperimenter, der kan være med til at beskrive eventuelle relationer mellem forskellige datakilder indsamlet på en Android smartphone.
+Denne er baseret på en platform\citefaelles{} udviklet i samme projektperiode, i samarbejde med en anden projektgruppe.
+Fokus har primært været på at understøtte eksperimenter der undersøger relationen mellem social aktivitet (sms, opkald etc.) og stemningsleje (baseret på patientens besvarelse af spørgsmål).
+Hertil er to ikke-forstyrrende\footnote{For definition se \cref{begreber::ikke_forstyrrende}} data moduler (sms/mms og opkald) blevet implementeret.
 
-Som nævnt i introduktionen blev disse to indsamlingsmetoder udarbejdet for at udføre et eller flere eksperimenter, som ser på om der er en sammenhæng mellem ikke-forstyrrende indsamlet data og forstyrrende indsamlet data.\bruno{bind sammen med \cref{problem}}
+Da det ikke på forhånd kan vurderes hvilke informationer der relaterer sig til social aktivitet, er en generel løsning blevet implementeret.
+Denne giver samtidig anledning til undersøgelse af andre relationer end netop den sociale.
+For understøttelse af indsamling af oplysninger fra patienten er et forstyrrende\footnote{For definition se \cref{begreber::forstyrrende}} data modul implementeret.
 
-\paragraph{Ikke-forstyrrende}
-I \cref{ikke_forstyrrende} er de mulige ikke-forstyrrende datakilder analyseret, beskrevet i \cref{datasamling}.
-Desuden er to udvalgte blevet implementeret, opkaldsinformation og SMS/MMS information.
-Dette er blevet beskrevet i \cref{implementerede_moduler}.
-De to moduler gør det muligt at indsamle ikke-forstyrrende data fra patienten som vil udgøre den ene del af eksperimentets data.
+%I det følgende gives en opsamling på projektets produkt, samt de problemstillinger og mål der blev beskrevet i \cref{problem}.
 
-\paragraph{Forstyrrende}
-I \cref{forstyrrende} er der blevet kigget på forstyrrende indsamling af data.
-Der er i \cref{maaling_af_stemningsleje} fundet frem til tre \textit{spørgeskemaer} som har lagt op til nogle behov, beskrevet i \cref{krav}.
-Disse behov har været grundstenen for det implementerede modul 'survey', beskrevet i \cref{survey}.
-Modulet gør det muligt at indsamle forstyrrende data fra patienten omkring hans stemningsleje.
-Dette vil udgøre den anden del af det data der skal sammenlignes i eksperimentet.
+\section{Relation mellem social aktivitet og stemningsleje}
+Dette afsnit beskriver kort de implementerede moduler og deres relation til udførelse af et eksperiment, der skal hjælpe med at afklare relationen mellem social aktivitet og stemningsleje.
+Yderligere gives en beskrivelse af implementationen af moduler i et brede perspektiv.
+Herved opsummeres også på de første to punkter i målsætningerne for projektet, listet i \cref{problem:maal}.
+Dette vil udgøre den anden del af det indsamlede data der skal sammenlignes i eksperimentet.
 
-\paragraph{Indsamling af data}
+I \cref{refleksion} diskuteres de aspekter af målsætningerne der ikke blev opnået i projektforløbet.
+Her findes også den diskussion (se \cref{refleksion:usikkerhed}) af problemstillinger i forbindelse med udførelse af eksperimenter, som var beskrevet i disse målsætningerne.
+
+\subsection{Ikke-forstyrrende}
+En række mulige ikke-forstyrrende (se \cref{ikke_forstyrrende}) datakilder er blevet vurderet for deres mulige relation til social aktivitet.
+Af disse er to blevet implementeret som selvstændige moduler (se \cref{implementerede_moduler:opkald} \nameref{implementerede_moduler:opkald} og \cref{implementerede_moduler:smsmms} \nameref{implementerede_moduler:smsmms})
+De to moduler gør det muligt at indsamle ikke-forstyrrende data om patientens sociale aktivitet.
+Moduler er implementeret som data moduler og har dermed til formål kun at indsamle informationer.
+Det vil sige at ikke foretager nogen analyse af den indsamlede information.
+
+\subsection{Forstyrrende}
+I \cref{maaling_af_stemningsleje} er der fundet frem til tre \textit{spørgeskemaer} til bestemmelse af en patients stemningsleje.
+For at kunne sikre at hvert af disse kan understøttes, er de blevet undersøgt med henblik på at klarlægge eventuelle behov.
+Disse er beskrevet i \cref{krav}.
+Behovene har været grundstenen for det implementerede data modul 'survey', beskrevet i \cref{survey}.
+
+Modulet gør det muligt at foretage forstyrrende dataindsamling fra patienten omkring hans stemningsleje.
+Dette kan ske ved hjælp af tre spørgsmåls-typer.
+Disse tre typer adskiller sig ved den type af besvarelse de hver især accepterer:
+\begin{itemize}
+\item \textbf{Multiple choice:} Giver mulighed for at patienten vælger sit/sine svar fra en række prædefinerede muligheder.
+\item \textbf{Skala:} Giver mulighed for at vælge en værdi på en prædefineret numerisk skala.
+En sådan skala kan præsenteres for brugeren med en tekstuel beskrivelse af hver af skalaens ender.
+\item \textbf{Tekst:} Lader patienten angive et svar i \textit{''fritekst''}.
+Denne type besvarelse kan eksempelvis anvendes til at føre dagbog.
+\end{itemize}
+Målsætningen om at lade modulet administrere tidsstyring for spørgsmål er kun delvist implementeret.
+I \cref{refleksion:tidspunkt} diskuteres problemstillingerne for den nuværende implementation.
+\mikkel{Fik vi/får vi skrevet noget om det her?}
+
+\subsection{Indsamling af data}
 Ved at samle data ind vha. 'survey'-modulet findes patientens stemningsleje.
-Sideløbende skal de ikke-forstyrrende dataindsamlings-moduler også indsamle data.
-Det er så muligt at sammenligne data og sige noget om de ikke-forstyrrende data.
+Sideløbende indsamles også data fra de ikke-forstyrrende dataindsamlings-moduler.
+Ud fra den indsamlede information vil det forhåbentligt være muligt at etablere en relation mellem de to informationskilder.
 
-Vi kan ikke på nuværende tidspunkt sige om der er en tydelig sammenhæng mellem de to datakilder. 
-Ønsket er at kunne konstruere en model, på baggrund af et eksperiment eller flere eksperimenter.
-Modellen skal ud fra ikke-forstyrrende indsamlet data om patientens sociale aktivitet kunne give et bud på patientens stemningsleje.\bruno{Disse tre sætninger måske bare refleksion? Eller måske gøre klar til det her i det nye afsnit 'problemformulering'. edit: er nu lavet \cref{problem}}
