@@ -2,11 +2,11 @@
 Dette projekt har søgt at etablere en platform til udførelse af eksperimenter, der kan være med til at beskrive eventuelle relationer mellem forskellige datakilder indsamlet på en Android smartphone.
 Denne er baseret på en platform\citefaelles{} udviklet i samme projektperiode, i samarbejde med en anden projektgruppe.
 Fokus har været på at understøtte eksperimenter der undersøger relationen mellem social aktivitet (sms, opkald etc.) og stemningsleje (baseret på patientens besvarelse af spørgsmål).
-Hertil er to ikke-forstyrrende\footnote{For definition se \cref{begreber::ikke_forstyrrende}} data moduler (sms/mms og opkald) blevet implementeret.
+Hertil er to ikke-forstyrrende\footnote{For definition se \cref{begreber::ikke_forstyrrende}} datamoduler (sms/mms og opkald) blevet implementeret.
 
 Da det ikke på forhånd kan vurderes hvilke informationer der relaterer sig til social aktivitet, er en generel løsning blevet implementeret.
 Denne giver samtidig anledning til undersøgelse af andre relationer end netop den sociale.
-For understøttelse af indsamling af oplysninger fra patienten er et forstyrrende\footnote{For definition se \cref{begreber::forstyrrende}} data modul implementeret.
+For understøttelse af indsamling af oplysninger fra patienten er et forstyrrende\footnote{For definition se \cref{begreber::forstyrrende}} datamodul implementeret.
 
 %I det følgende gives en opsamling på projektets produkt, samt de problemstillinger og mål der blev beskrevet i \cref{problem}.
 
@@ -23,14 +23,14 @@ Her findes også den diskussion (se \cref{refleksion:usikkerhed}) af problemstil
 En række mulige ikke-forstyrrende (se \cref{ikke_forstyrrende}) datakilder er blevet vurderet for deres mulige relation til social aktivitet.
 Af disse er to blevet implementeret som selvstændige moduler (se \cref{implementerede_moduler:opkald} \nameref{implementerede_moduler:opkald} og \cref{implementerede_moduler:smsmms} \nameref{implementerede_moduler:smsmms}).
 De to moduler gør det muligt at indsamle ikke-forstyrrende data om patientens sociale aktivitet.
-Modulerne er implementeret som data moduler og har dermed til formål kun at indsamle informationer.
+Modulerne er implementeret som datamoduler og har dermed til formål kun at indsamle informationer.
 Det vil sige at de ikke foretager nogen analyse af den indsamlede information.
 
 \subsection{Forstyrrende}
 I \cref{maaling_af_stemningsleje} er der fundet frem til tre \textit{spørgeskemaer} til bestemmelse af en patients stemningsleje.
 For at kunne sikre at hvert af disse kan understøttes, er de blevet undersøgt med henblik på at klarlægge eventuelle behov.
 Disse er beskrevet i \cref{krav}.
-Behovene har været grundstenen for det implementerede data modul 'survey', beskrevet i \cref{survey}.
+Behovene har været grundstenen for det implementerede datamodul 'survey', beskrevet i \cref{survey}.
 
 Modulet gør det muligt at foretage forstyrrende dataindsamling fra patienten omkring hans stemningsleje.
 Dette kan ske ved hjælp af tre spørgsmåls-typer, multiple choice, skala og tekst.
