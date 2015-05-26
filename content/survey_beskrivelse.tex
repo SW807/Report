@@ -11,11 +11,11 @@ På \cref{stemreg::stemningsleje} kan ses en multiple choice spørgsmål hvor de
 Dette spørgsmål findes også i en variant hvor man kun kan vælge en mulighed, indikeret ved runde svarbokse (radio buttons).
 
 \Cref{stemreg::soevn} viser et spørgsmål der besvares ved en skala. 
-Spørgsmålene har to labels et for minimum og et for maksimum, samt en indikator der viser den valgte værdi.
+Spørgsmålene har to labels; ét for minimum og ét for maksimum, samt en label der viser den valgte værdi.
 
-\Cref{stemreg::notater_vaegt} viser et spørgsmål der skal besvares ved en tekst. 
+\Cref{stemreg::notater_vaegt} viser et spørgsmål der skal besvares med en tekst. 
 
-Til det visuelle er der brugt standard dialoger fra Android biblioteket.\cite{android_dialogs}
+Til det visuelle er der brugt standard dialoger fra Android biblioteket \cite{android_dialogs}.
 	
 \begin{figure}
 	\centering
@@ -39,12 +39,12 @@ Til det visuelle er der brugt standard dialoger fra Android biblioteket.\cite{an
 \end{figure}
 
 \section{Scheduler}
-For at kunne stille spørgsmål så fleksibelt som muligt er der blevet konstrueret en scheduler.
+For at kunne stille spørgsmål så fleksibelt som muligt er der blevet konstrueret en \textit{Scheduler}.
 Stemningsregistrering og dagbog skal ske én gang om dagen, mens PANAS spørgsmål sagtens kan spredes ud over dagen for at få et bredere billede af patientens tilstand.
 
 
 \paragraph{Notifikationer}
-For ikke at forstyrre brugerens hverdag for meget bruger vi en notifikation til at advisere om et forestående spørgsmål.
+For ikke at forstyrre brugerens hverdag for meget bruger vi en notifikation til at meddele om et forestående spørgsmål.
 Notifikationen indeholder spørgsmålsteksten, så patienten kan vurdere om han har tid til at besvare spørgsmålet.
 Eksempler på disse notifikationer kan ses på \cref{noti}.
 
@@ -54,8 +54,8 @@ Eksempler på disse notifikationer kan ses på \cref{noti}.
 	\caption{Fire notifikationer sendt af Survey}\label{noti}
 \end{figure}
 
-Når der trykkes på notifikationen dukker spørgsmålet op i en dialogboks hvor patientes svar kan indføres.
-Til det visuelle er der brugt standard notifikationer fra Android biblioteket.\cite{android_notifications}
+Når der trykkes på notifikationen vises spørgsmålet i en dialogboks hvor patientes svar kan indføres.
+Til det visuelle er der brugt standard notifikationer fra Android biblioteket \cite{android_notifications}.
 
 For at gøre systemet endnu mere fleksibelt skal der være mulighed for at kunne udskyde et spørgsmål.
 På denne måde har patienten fuld kontrol over hvornår han svarer, uden at være nødt til at skulle afbryde det han er i gang med.
