@@ -1,13 +1,13 @@
 \chapter{Implementerede moduler}\label{implementerede_moduler}
 I \cref{datasamling} blev en række mulige datakilder beskrevet for at klargøre de muligheder projektgruppen så for indsamling af information der relaterer sig til en patients sociale aktivitet.
-Af disse muligheder er indsamlingen af opkalds-oplysninger og meta information om sms og mms beskeder blevet implementeret som sensor-moduler.
-Disse er udvalgt, da de repræsenterer den traditionelle brug af en mobiltelefon samt en simpel tilgang til informationen.
+Af disse muligheder er indsamlingen af opkalds-oplysninger og meta information om sms og mms beskeder blevet implementeret som data-moduler.
+Disse er udvalgt, da de repræsenterer den traditionelle brug af en mobiltelefon, samt en simpel tilgang til informationen.
 
 Yderligere, da dette projekt søger at etablere en platform til at foretage eksperimenter der skal hjælpe med at klarlægge en relation mellem social aktivitet og stemningsleje, er kun de simpleste informationskilder blevet implementeret.
 Det betyder at tiden bedre har kunnet udnyttes til implementering af den underliggende platform, fremfor implementering af mere komplekse sensor-moduler.
 
-De to informationskilder er implementeret som to separate data-moduler \citefaelles{4.2.4.3 Beskrivelse af Modulært Lag}, der hver især indsamler meta-information om deres respektive kilder.
-Begge moduler er implementeret således at de, hver gang de startes, indlæser alt nytilkommen data.
+De to informationskilder er implementeret som to separate data-moduler \citefaelles{4.2.4.3 Beskrivelse af Modulært Lag}, der hver især indsamler meta-information fra deres respektive kilder.
+Begge moduler er implementeret således at de periodisk indlæser alt nytilkommen data.
 Hvor ofte denne opdatering finder sted er givet ved hvert af modulernes modul-definitioner \citefaelles{4.4 Modul-definition}.
 
 De to moduler, det data de hver indsamler, samt deres repræsentation af dette data, beskrives i større detalje herunder.
@@ -17,11 +17,11 @@ De to moduler, det data de hver indsamler, samt deres repræsentation af dette d
 
 \section{Opkald}\label{implementerede_moduler:opkald}
 Ud fra beskrivelsen givet i \cref{datasamling:opkald}, er der ikke mange muligheder for indsamling af data for opkald.
-Alt nødvendig information opbevares af Android i en enkelt database tabel.
+Al nødvendig information opbevares af Android i en enkelt database tabel.
 Der kan dermed foretages en direkte mapping fra denne tabel, til modulets egen tabel, ved blot at kopiere de aktuelle informationer.
 
 Modul-definitionen for opkald kan ses i \cref{module:calls}.
-Af denne fremgår det at de information der indhentes om hvert opkald er:
+Af denne fremgår det at de informationer der indhentes om hvert opkald er:
 \begin{itemize}
 \item Kontakt oplysning (telefonnummer).
 \item Dato for opkaldet.
@@ -31,7 +31,7 @@ Af denne fremgår det at de information der indhentes om hvert opkald er:
 \end{itemize}
 
 Ved at kopiere disse informationer over i Managerens database, tillades en ensartet tilgang til dem for andre moduler.
-På denne måde vil alle analyse og view moduler kunne tilgå data via andre moduler, således at det kun er sensor moduler der har adgang til native funktioner og data.
+På denne måde vil alle analyse- og visnings-moduler kunne tilgå data via andre moduler, således at det kun er data-moduler der har adgang til native funktioner og data.
 Det bliver altså på denne måde muligt at styre hvor længe informationen skal være tilgængelig for andre moduler.
 
 \input{content/modul_definitioner/calls}
@@ -44,13 +44,13 @@ Altså kan der stadig blot laves en direkte kopiering af data, dog fra mere end 
 Samme udgangspunkt anvendes til indlæsning af MMS beskeder.
 Her eksisterer dog en separat tabel til kontakt-informationer, eftersom MMS beskeder kan anvendes til gruppekommunikation.
 Den ekstra tabel tillader en en-til-mange relation mellem besked og kontakter.
-Sendes en besked til mere end en modtager, gemmes dette i modulets tabel som flere separate beskeder.
+Sendes en besked til mere end én modtager, gemmes dette i modulets tabel som flere separate beskeder.
 
 Yderligere kan MMS beskeder indeholde andre type data end blot tekst.
 En ekstra tabel tillader aflæsning af disse enkelte dele af MMS beskeder.
 Kun tekst-delene af beskederne kopieres af modulet.
-Da tekst kan relatere sig til andre dele af en besked eller være helt blottet for tekst men ej indhold, markeres beskeder i modulets tabel som værende MMS beskeder.
-Dermed kan der tages særligt hensyn til sådanne beskeder i en eventuel tekstuel analyse samt statistisk analyse af beskedstørrelser.
+Da tekst kan relatere sig til andre dele af en besked eller være helt blottet for tekst, men ej andet indhold, markeres beskeder i modulets tabel som værende MMS beskeder.
+Dermed kan der tages særligt hensyn til sådanne beskeder i en eventuel tekstuel analyse, samt statistisk analyse af beskedstørrelser.
 
 Modul-definitionen for beskeder kan ses i \cref{module:sms}.
 Af denne fremgår det at de information der indhentes om hvert opkald er:
