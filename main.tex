@@ -4,6 +4,10 @@
 \input{./setup/todonotes}
 \input{./setup/lstlisting}
 \input{./setup/commands}
+\usepackage[natbib=true, style=numeric, backend=bibtex, sorting=none]{biblatex}
+\setcounter{biburlucpenalty}{8000}
+\setcounter{biburllcpenalty}{7000}
+\addbibresource{bibliography.bib}
 
 \begin{document}
 
@@ -11,6 +15,8 @@
 
 %Front page
 \begin{titlepage}
+
+
 
 \begin{center}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
@@ -78,6 +84,6 @@
 
 \input{appendix}
 
-\bibliographystyle{unsrtnat}
-\bibliography{bibliography}
+
+\printbibliography[heading=bibintoc]
 \end{document}
