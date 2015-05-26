@@ -35,21 +35,23 @@ Et eksempel på en faktor fra HAM-D \cite{ham_d}:\\
 
 Det er altså nødvendigt at kunne lave et spørgsmål der indeholder en titel og et antal svarmuligheder for at kunne vise HAM-D baserede spørgsmål.
 
-\subsection{Stemningsregistrering} 
+\subsection{Stemningsregistrering}\label{krav:stemningsregistrering}
 Stemningsregistrering er en smule mere kompleks, da den indeholder 5 forskellige spørgsmål; stemningsleje, angst, antal timers søvn, medicin, notater og vægt, med 4 i alt forskellige typer af svarmuligheder.
 
-\paragraph{Stemningsleje} besvares med en Likert-skala, hvor værdierne i stedet for tal er 7 farver gående fra mørk rød (manisk) til mørk blå (deprimeret), med gul som normalt stemmeleje (se evt. \cref{figure::stemningsregistrerings_skema}).
+\begin{description}
+\item[Stemningsleje] besvares med en Likert-skala, hvor værdierne i stedet for tal er 7 farver gående fra mørk rød (manisk) til mørk blå (deprimeret), med gul som normalt stemningsleje (se evt. \cref{figure::stemningsregistrerings_skema}).
 
-\paragraph{Angst} angives med en værdi mellem 0 og 3, altså en Likert-skala der starter på 0 og slutter på 3.
+\item[Angst] angives med en værdi mellem 0 og 3, altså en Likert-skala der starter på 0 og slutter på 3.
 
-\paragraph{Antal timers søvn} er en talværdi, antageligt gående fra 0 til 24, da stemningsregistrering udfyldes hver dag.
+\item[Antal timers søvn] er en talværdi, antageligt gående fra 0 til 24, da stemningsregistrering udfyldes hver dag.
 
-\paragraph{Medicin} er en mulighed for at angive hvilket, og på hvor mange dage, medicin har været indtaget den forestående måned.
+\item[Medicin] er en mulighed for at angive hvilket, og på hvor mange dage, medicin har været indtaget den forestående måned.
 Dette udfyldes derved kun sidst på måneden.
 
-\paragraph{Notater og vægt} er en mulighed for at notere vigtige hændelser som fri tekst.
+\item[Notater og vægt] er en mulighed for at notere vigtige hændelser som fritekst.
 Her vil kvinder også skulle angive dage med menstruation.
 Desuden skal vægten angives mindst én gang om måneden.
+\end{description}
 
 Til stemningsregistrering er der behov for flere typer spørgsmål.
 For at kunne stille \emph{stemningsleje} spørgsmål skal man kunne opstille en Likert skala med forskellige farver på svarmulighederne.
@@ -72,17 +74,22 @@ Ud fra ovenstående er de resulterende typer af svarmuligheder:
 
 \section{Tidspunkter for spørgsmål}\label{tidspnkforspg}
 Ud fra den forrige sektion, er der lagt op til at spørgsmål skal stilles på forskellige tidspunkter.
+Det kan både være forskellige tidspunkter på måneden og forskellige tidspunkter på dagen.
+Blandt andet viste undersøgelsen i \citet{panas} om PANAS, at der var en generel tendens til at stemningslejet startede relativt lavt om morgenen, steg som dagen forløb for igen at falde hen imod aftenen.
 
-Det kan både være forskellige tidspunkter på måneden eller forskellige tidspunkter på dagen.
-Blandt andet viste undersøgelsen i \citet{panas} om PANAS, at der var en generel tendens til at stemningslejet startede relativt lavt om morgenen, for at stige som dagen forløb, for igen at falde hen imod aftenen.
+Det er projektgruppens ønske at etablere en løsning for hvilken det er muligt at præcisere hvornår patienten skal stilles bestemte spørgsmål.
+Det følgende vil derfor beskrive hvilke muligheder for indstilling af tid der er nødvendige for at kunne udføre de metoder der blev undersøgt i \cref{maaling_af_stemningsleje}.
 
-Det følgende vil beskrive hvilke muligheder for indstilling af tid der er nødvendig for at kunne udføre de metoder der blev undersøgt i \cref{maaling_af_stemningsleje}.
-\stefan{jeg har ikke skrevet noget om det vi snakkede om i forhold til at vi har ``lavet det så fleksibelt som muligt'' synes ikke det passer ind. Der er tilføjet den åbne problemstilling, er det ikke nok?}
+\paragraph{Tid på kalendermåneden}
+Som angivet i \cref{krav:stemningsregistrering}, vil der for stemningslejeregistrering være behov for at stille daglige spørgsmål, men også spørgsmål der kun skal besvares en enkelt gang om måneden.
 
-\subsection{Tid på kalendermåneden}
-Som angivet i forrige sektion, vil der for Stemningslejeregistrering være behov for at stille daglige spørgsmål, men også spørgsmål der kun skal besvares en enkelt gang pr. måneden.
-
-\subsection{Tid på døgnet}
+\paragraph{Tid på døgnet}
 Som benævnt ovenover kan stemningslejet variere i løbet af dagen.
 Det er derfor vigtigt at enten stille spørgsmålene på det rigtige tidspunkt, eller tage højde for disse variationer i vægtningen af svaret afhængigt af spørge-tidspunktet.
 Dette lægger op til følgende åbne problemstilling: \textit{Hvornår skal spørgsmål stilles for at få det bedste billede af patientes stemningsleje?}
+En af problemstillingerne herved er forståelsen af ''\textit{det rigtige tidspunkt}''.
+Ved at udvælge tidspunktet for hvornår brugeren spørges påvirkes resultatet af besvarelserne.
+Dermed skal analyse af besvarelser ses i kontekst af hvornår besvarelsen er sket.
+Alternativt skal spørgsmål, som nævnt herover, stilles på et tidspunkt således at tidspunktet har minimal effekt på besvarelsen.
+En mulighed for at opnå dette er at lade brugeren besvare samme spørgsmål på samme tidspunkt, således at besvarelser kan vurderes i relation til hinanden med ensartet påvirkning fra tidspunktet.
+
