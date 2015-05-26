@@ -1,5 +1,5 @@
 \chapter{Survey - et modul til forstyrrende dataindsamling}\label{survey}
-Kapitlet indeholder en beskrivelse af et modul kaldet 'survey', som visuelt præsenterer spørgsmål og gemmer de bruger-indtastede data.
+Dette kapitel indeholder en beskrivelse af et modul kaldet 'survey', som visuelt præsenterer spørgsmål og gemmer de bruger-indtastede data.
 Modulets implementering er baseret på de behov der opsat i \cref{krav}.
 
 \section{Implementation af spørgsmålstyper}\label{survey:spg}
@@ -11,7 +11,7 @@ På \cref{stemreg::stemningsleje} kan ses en multiple choice spørgsmål hvor de
 Dette spørgsmål findes også i en variant hvor man kun kan vælge en mulighed, indikeret ved runde svarbokse (radio buttons).
 
 \Cref{stemreg::soevn} viser et spørgsmål der besvares ved en skala. 
-Spørgsmålene har to labels; ét for minimum og ét for maksimum, samt en label der viser den valgte værdi.
+Spørgsmålene har to labels: en for minimum og en for maksimum, samt en label der viser den valgte værdi.
 
 \Cref{stemreg::notater_vaegt} viser et spørgsmål der skal besvares med en tekst. 
 
@@ -19,12 +19,13 @@ Til det visuelle er der brugt standard dialoger fra Android biblioteket \cite{an
 	
 \begin{figure}
 	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
+	\begin{subfigure}[b]{0.35\textwidth}
 		\includegraphics[width=\textwidth]{stemningsregistrering_eksempel/stemningsleje}
 		\caption{Multiple choice}\label{stemreg::stemningsleje}
 	\end{subfigure}
 	\hfill
-\begin{minipage}[b]{0.45\textwidth}
+\begin{minipage}[b]{0.35\textwidth}
+	\centering
 	\begin{subfigure}[b]{\textwidth}
 		\includegraphics[width=\textwidth]{stemningsregistrering_eksempel/soevn}
 		\caption{Skala}\label{stemreg::soevn}
@@ -50,7 +51,7 @@ Eksempler på disse notifikationer kan ses på \cref{noti}.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.6\textwidth]{stemningsregistrering_eksempel/notification_bar}
+	\includegraphics[width=0.4\textwidth]{stemningsregistrering_eksempel/notification_bar}
 	\caption{Fire notifikationer sendt af Survey}\label{noti}
 \end{figure}
 
