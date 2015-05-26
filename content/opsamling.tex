@@ -33,18 +33,11 @@ Disse er beskrevet i \cref{krav}.
 Behovene har været grundstenen for det implementerede data modul 'survey', beskrevet i \cref{survey}.
 
 Modulet gør det muligt at foretage forstyrrende dataindsamling fra patienten omkring hans stemningsleje.
-Dette kan ske ved hjælp af tre spørgsmåls-typer.
-Disse tre typer adskiller sig ved den type af besvarelse de hver især accepterer:
-\begin{itemize}
-\item \textbf{Multiple choice:} Giver mulighed for at patienten vælger sit/sine svar fra en række prædefinerede muligheder.
-\item \textbf{Skala:} Giver mulighed for at vælge en værdi på en prædefineret numerisk skala.
-En sådan skala kan præsenteres for brugeren med en tekstuel beskrivelse af hver af skalaens ender.
-\item \textbf{Tekst:} Lader patienten angive et svar i \textit{''fritekst''}.
-Denne type besvarelse kan eksempelvis anvendes til at føre dagbog.
-\end{itemize}
+Dette kan ske ved hjælp af tre spørgsmåls-typer, multiple choice, skala og tekst.
+Disse spørgsmål bliver stillet ved at en notifikation forekommer på telefonens skærm, hvorefter patienten kan svare på spørgsmålet når det er belejligt.
+
 Målsætningen om at lade modulet administrere tidsstyring for spørgsmål er kun delvist implementeret.
 I \cref{refleksion:tidspunkt} diskuteres problemstillingerne for den nuværende implementation.
-\bruno{Måske lidt for detaljeret}
 \subsection{Indsamling af data}
 Ovenfor er det beskrevet i hvilken grad målene, \cref{problem:maal}, er opfyldt.
 Det muliggør udførelsen af eksperimenter der undersøger relationen mellem social aktivitet og stemningsleje.
