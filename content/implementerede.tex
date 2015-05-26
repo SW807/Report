@@ -3,7 +3,7 @@ I \cref{datasamling} blev en række mulige datakilder beskrevet for at klargøre
 Af disse muligheder er indsamlingen af opkalds-oplysninger og meta information om sms og mms beskeder blevet implementeret som data-moduler.
 Disse er udvalgt, da de repræsenterer den traditionelle brug af en mobiltelefon, samt en simpel tilgang til informationen.
 
-Yderligere, da dette projekt søger at etablere en platform til at foretage eksperimenter der skal hjælpe med at klarlægge en relation mellem social aktivitet og stemningsleje, er kun de simpleste informationskilder blevet implementeret.
+Da dette projekt søger at etablere en platform til at foretage eksperimenter der skal hjælpe med at klarlægge en relation mellem social aktivitet og stemningsleje, er kun de simpleste informationskilder blevet implementeret.
 Det betyder at tiden bedre har kunnet udnyttes til implementering af den underliggende platform, fremfor implementering af mere komplekse sensor-moduler.
 
 De to informationskilder er implementeret som to separate data-moduler \citefaelles{Afsnit 4.2.4.3}, der hver især indsamler meta-information fra deres respektive kilder.
@@ -38,8 +38,8 @@ Det bliver altså på denne måde muligt at styre hvor længe informationen skal
 
 \section{SMS/MMS beskeder}\label{implementerede_moduler:smsmms}
 For SMS beskeder er proceduren for indlæsning af information næsten lige så triviel som for opkald.
-Den eneste forskel er at beskederne er organiseret i mere end en tabel.
-Altså kan der stadig blot laves en direkte kopiering af data, dog fra mere end en tabel.
+Den eneste forskel er at beskederne er organiseret i mere end én tabel.
+Der kan altså stadig blot laves en direkte kopiering af data, dog fra mere end én tabel.
 
 Samme udgangspunkt anvendes til indlæsning af MMS beskeder.
 Her eksisterer dog en separat tabel til kontakt-informationer, eftersom MMS beskeder kan anvendes til gruppekommunikation.
