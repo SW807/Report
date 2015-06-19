@@ -38,6 +38,8 @@
 % does not look nice, try deleting the line with the fontenc.
 \usepackage{helvet}
 
+\usepackage{nameref}
+
 \usepackage{colortbl}
 
 \usepackage{subcaption}
@@ -79,6 +81,22 @@
 
 \graphicspath{ {../graphics/} }
 \newcommand{\btVFill}{\vskip0pt plus 1filll}
+
+\makeatletter
+\newcommand*{\currentname}{\@currentlabelname}
+\makeatother
+\AtBeginSection[]
+{
+   \begin{frame}
+        \frametitle{\currentname}
+   \end{frame}
+}
+\AtBeginSubsection[]
+{
+   \begin{frame}
+        \frametitle{\currentname}
+   \end{frame}
+}
 
 \begin{document}
 % the titlepage
