@@ -1,5 +1,5 @@
 \section{Introduktion}
-{\aauwavesbg%
+{%
 	\begin{frame}{Problem} % the plain option removes the sidebar and header from the title page
 \begin{itemize}
 	\item PsyLog som platform
@@ -16,9 +16,9 @@
 \end{frame}}
 
 
-{\aauwavesbg%
+{ %
 	\begin{frame}{Mål for projekt} % the plain option removes the sidebar and header from the title page
-		Vi vil gøre det muligt at foretage psykiatrisk forskning på området
+		Vi vil gøre det muligt at udføre psykiatrisk forskning på området
 		\begin{itemize}
 			\item Social aktivitet
 			\begin{itemize}
@@ -37,98 +37,49 @@
 
 
 
-{\aauwavesbg%
+{ %
 	\begin{frame}{Eksisterende forskning} % the plain option removes the sidebar and header from the title page
 		Få kilder i psykiatrisk forskning benytter mobile sensorer
 		Social Sensing for Epidemiological Behaviour Change
 		\begin{itemize}
 			\item 70 Studerende på et kollegium
-			\item Opkladshistorik, SMS-historik, WLAN lokation samt Bluetooth interationer
-			\item Sammenhæng mellem antal sociale interationer og fysisk/psykisk sygdom
+			\item Opkadshistorik, SMS-historik, WLAN lokation samt Bluetooth interationer
+			\item Sammenhæng mellem antal sociale interaktioner og fysisk/psykisk sygdom
 			\item Individer med færre interaktioner meldte ``sad / lonely / depressed''
 		\end{itemize}
 		
-{\color{red} Skal vi også nævne 4.2.2?}
 		
 	\end{frame}}
 
 \section{Ikke-forstyrrende dataopsamling}
-{\aauwavesbg%
+{ %
 	\begin{frame}{Implementerede moduler} % the plain option removes the sidebar and header from the title page
 		To moduler er implementeret
 		\begin{itemize}
-			\item Opkald
-			\item SMS
+			\item \textbf{Opkald}
+			\item \textbf{SMS}
+			\item Lokation
+			\item E-mail
 		\end{itemize}
 			
 	\end{frame}}
 
-\subsection{Opkald}
-{\aauwavesbg%
-\begin{frame}{Opkald} % the plain option removes the sidebar and header from the title page
-	
-Tilgængelig data på android:
-\begin{itemize}
-	\item Indgående opkald
-	\item Udgående opkald
-	\item Mistede opkald
-	\item Kontaktoplysninger for opkald
-	\item Varighed for opkald
-\end{itemize}
 
-Begrænsninger:
-\begin{itemize}
-	\item Kun meta-data - Ingen oplysninger om indhold
-\end{itemize}
 
-\end{frame}}
-
-{\aauwavesbg%
+{ %
 \begin{frame}{Analyser} % the plain option removes the sidebar and header from the title page
-Følgende analyser vurderes brugbare
+Følgende analyser vurderes brugbare for opkald og sms/mms
 \begin{itemize}
 	\item Antal samtaler - flere samtaler tyder på mere interaktion
-	\item Samtalelængde - lange samtaler tyder på dybere interaktion
-	\item Mistede opkald - mistede opkald tyder på indelukket patient
+	\item Samtalelængde / beskedlængde - lange samtaler tyder på dybere interaktion
 	\item Antal forskellige kontakter - flere kontakter tyder på lyst til at have kontakt med andre
+	\item Mistede opkald / intet svar - mistede opkald tyder på indelukket patient
 \end{itemize}
 	
 \end{frame}}
-
-\subsection{SMS/MMS}
-{\aauwavesbg%
-\begin{frame}{SMS/MMS} % the plain option removes the sidebar and header from the title page
-Tilgængelig data på android:
-\begin{itemize}
-	\item Indgående beskeder
-	\item Udgående beskeder
-	\item Kontaktoplysninger for besked
-	\item Afsendelsestidspunkt
-	\item Indhold
-\end{itemize}
-
-Begrænsninger:
-\begin{itemize}
-	\item ``Ubesvarede beskeder'' er ikke tilgængelig
-\end{itemize}
-\end{frame}}
-
-{\aauwavesbg%
-	\begin{frame}{Analyser} % the plain option removes the sidebar and header from the title page
-		Følgende analyser vurderes brugbare
-		\begin{itemize}
-			\item Antal beskeder - flere beskeder tyder på mere interaktion
-			\item Beskedlængde - lange samtaler tyder på dybere interaktion
-			\item Antal forskellige kontakter - flere kontakter tyder på lyst til at have kontakt med andre
-		\end{itemize}
-		
-	\end{frame}}
-	
-
-
 
 \section{Forstyrrende dataopsamling}
-{\aauwavesbg%
+{ %
 \begin{frame} % the plain option removes the sidebar and header from the title page
 Forstyrrende dataindsamling
 	 til måling af stemningsleje
@@ -138,31 +89,31 @@ Forstyrrende dataindsamling
 	
 \subsection{Metoder}
 
-{\aauwavesbg%
-\begin{frame}{PANAS} % the plain option removes the sidebar and header from the title page
+{ %
+\begin{frame}{Positive Affect and Negative Affect Scales} % the plain option removes the sidebar and header from the title page
 \includegraphics[width=\textwidth]{panas}
 	
 \end{frame}}
 
-{\aauwavesbg%
+{ %
 	\begin{frame}{Stemningsregistrering} % the plain option removes the sidebar and header from the title page
 		Patienten reflekterer over sit eget stemningsleje
 		
 		\begin{center}
 		\begin{tabular}{|c|}
-			\hline \cellcolor{red} Svær mani \\ 
+			\hline \cellcolor{red!90} Svær mani \\ 
 			\hline \cellcolor{red!60} Moderat mani \\ 
-			\hline \cellcolor{red!20} Let mani \\ 
-			\hline \cellcolor{yellow} Normal \\ 
-			\hline \cellcolor{blue!20} Let mani \\ 
+			\hline \cellcolor{red!30} Let mani \\ 
+			\hline \cellcolor{yellow!70} Normal \\ 
+			\hline \cellcolor{blue!30} Let mani \\ 
 			\hline \cellcolor{blue!60} Moderat mani \\ 
-			\hline \cellcolor{blue} Svær mani \\ 
+			\hline \cellcolor{blue!90} Svær mani \\ 
 			\hline 
 		\end{tabular} 
 		\end{center}
 	\end{frame}}
 	
-{\aauwavesbg%
+{ %
 	\begin{frame}{Stemningsregistrering} % the plain option removes the sidebar and header from the title page
 
 		Angst specificeres på følgende skala:
@@ -175,7 +126,7 @@ Forstyrrende dataindsamling
 		\end{tabular} 
 	\end{frame}}
 	
-{\aauwavesbg%
+{ %
 	\begin{frame}{Stemningsregistrering} % the plain option removes the sidebar and header from the title page
 		
 		Derudover noteres detaljer om patientens hverdag
@@ -187,17 +138,22 @@ Forstyrrende dataindsamling
 		\end{itemize}
 	\end{frame}}
 	
-{\aauwavesbg%
-\begin{frame}{HAM-D} % the plain option removes the sidebar and header from the title page
+{ %
+\begin{frame}{Hamilton Depressionsskala} % the plain option removes the sidebar and header from the title page
 	\begin{itemize}
 		\item En mængde faktorer besvares givet mellem 3 og 5 svarmuligheder
 		\item Score beregnes
 		\item Stemningsleje vurderes
 	\end{itemize}
 	
+	Begræsning:
+	\begin{itemize}
+		\item Kræver uddannet psykiater at udføre
+	\end{itemize}
+	
 \end{frame}}
 	
-{\aauwavesbg%
+{ %
 	\begin{frame}{Eksempler på spørgsmål} % the plain option removes the sidebar and header from the title page
 		 Arbejde og interesser
 		\begin{itemize}
@@ -211,7 +167,7 @@ Forstyrrende dataindsamling
 	\end{frame}}
 
 \subsection{Behov}
-{\aauwavesbg%
+{ %
 \begin{frame}{Behov} % the plain option removes the sidebar and header from the title page
 For at kunne udføre de tre nævnte metoder skal vi kunne stille følgende typer af spørgsmål
 
@@ -227,12 +183,22 @@ For at kunne udføre de tre nævnte metoder skal vi kunne stille følgende typer
 \end{frame}}
 
 \subsection{Demonstration}
-{\aauwavesbg%
 \begin{frame}{Demonstration af implementeret modul} % the plain option removes the sidebar and header from the title page
-	Det implementerede modul består af følgende:
-	\begin{itemize}
-		\item Scheduler
-		\item Notifikationer
-		\item Spørgsmål
-	\end{itemize}
-\end{frame}}
+\centering
+\includegraphics[height=0.8\textheight]{demo_1_Tom}
+\end{frame}
+
+\begin{frame}{Demonstration af implementeret modul} % the plain option removes the sidebar and header from the title page
+	\centering
+	\includegraphics[height=0.8\textheight]{demo_2_Noti}
+\end{frame}
+
+\begin{frame}{Demonstration af implementeret modul} % the plain option removes the sidebar and header from the title page
+	\centering
+	\includegraphics[height=0.8\textheight]{demo_3_Detaljer}
+\end{frame}
+
+\begin{frame}{Demonstration af implementeret modul} % the plain option removes the sidebar and header from the title page
+	\centering
+	\includegraphics[height=0.8\textheight]{demo_4_popup}
+\end{frame}
