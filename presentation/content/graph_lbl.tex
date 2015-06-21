@@ -1,16 +1,22 @@
-\newcommand{\mygraph}[2]{\definecolor{fom}{RGB}{0,153,139}
-\begin{tikzpicture}[x=8cm,y=4cm]
+\newcommand{\gsms}{
+\draw [line width=1pt, magenta] plot [smooth] coordinates {(0,0) (0.2563,0.367) (0.4765,0.1869) (0.6004,0.6964) (0.777,0.0586) (0.9044,0.3222) (1.0,0.4321)};
+\node[anchor=west] at (1.0,0.4321) {SMS};
+}
+\newcommand{\gopkald}{
+\draw [line width=1pt, fom] plot [smooth] coordinates {(0,0) (0.2325,0.2839) (0.4604,0.2355) (0.6001,0.7629) (0.7638,0.0278) (0.8912,0.4276) (1.0,0.5507)};
+\node[anchor=west] at (1.0,0.5507) {Opkald};
+}
+\newcommand{\gstem}{
+\draw [line width=1pt, orange] plot [smooth] coordinates {(0,0) (0.2571,0.3322) (0.463,0.275) (0.6072,0.8024) (0.7777,0.0343) (0.9314,0.2407) (1.0,0.3178)};
+\node[anchor=west] at (1.0,0.3178) {Stemningsl.};
+}
+
+\newcommand{\mygraph}[1]{\definecolor{fom}{RGB}{0,153,139}
+\begin{tikzpicture}[x=7cm,y=4cm]
 \draw[thick, lightgray, ->] (0,0) -- (0,1);
 \draw[thick, lightgray, ->] (0,0) -- (1,0);
 
-\coordinate (end1) at (1.0,0.4321);
-\coordinate (end2) at (1.0,0.5507) {};
-
-\draw [line width=1pt, magenta] plot [smooth] coordinates {(0,0) (0.2563,0.367) (0.4765,0.1869) (0.6004,0.6964) (0.777,0.0586) (0.9044,0.3222) (end1)};
-\draw [line width=1pt, fom] plot [smooth] coordinates {(0,0) (0.2325,0.2839) (0.4604,0.2355) (0.6001,0.7629) (0.7638,0.0278) (0.8912,0.4276) (end2)};
- 
- \node[anchor=west] at (end1) {#1};
- \node[anchor=west] at (end2) {#2};
+#1
  
 \node[label={[label distance=0.0cm,text depth=-1ex]center:Tid}] at (0.5,-0.05) {};
 \end{tikzpicture}}
