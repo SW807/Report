@@ -1,18 +1,28 @@
+\input{content/graph_lbl}
+\newcommand{\pbb}[1]{\parbox[m]{3cm}{\vspace{.5\baselineskip} \raggedright {#1} \vspace{.5\baselineskip}}}
 \section{Diskussion}
 \subsection{Survey-modulet}
 \begin{frame}{Modul forbedringer}
 \begin{itemize}
-\item Manglende besvarelse\\
-\begin{tabular}{|l|l|l|}\cline{2-3}
-\multicolumn{1}{l|}{} & Aktiv & Passiv\\\hline
-Udsættelse & & \\\hline
-Udeladelse & & \\\hline
-\end{tabular}
+\item Manglende besvarelse af spørgsmål:
 \end{itemize}
+\begin{center}
+\begin{tabular}{|l| >{\raggedright}m{3cm} | c |}\cline{2-3}
+\multicolumn{1}{l|}{} & Aktiv & Passiv \\\hline
+Udeladelse & \pbb{Patient vælger at han ikke vil besvare.} & \pbb{Patienten undlader besvarelse.} \\\hline
+Udsættelse & \pbb{Patient vælger at udsætte besvarelse.} & \pbb{Patienten undlader besvarelse, og spørges igen senere.} \\\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}{Modul forbedringer}
 \begin{itemize}
 \item Tidspunkt for spørgsmål
 \begin{itemize}
-\item Reduktion \& Variation
+\item Reduktion i antallet af samtidige spørgsmål.
+\item Variation af spørgsmål.
+\item Spørgsmåls-sæt besvares over tid og kontinuert.
+\item Spørgsmål besvares på samme tid af dagen.
 \end{itemize}
 \item Brugergrænseflade
 \begin{itemize}
@@ -33,35 +43,42 @@ Dette lader patienten følge udviklingen i egne besvarelser af fx:
 \end{itemize}
 \pause
 \item Stemningsleje\\
-\input{content/graph_stemning}
+
+\mygraph{\gstem{}}
 \end{itemize}
 \end{frame}
 
 \subsection{Eksperimenter}
-\input{content/graph_lbl}
 %(Sammenligning på tværs af sygdomme og Sammenligning på tværs af sensorer/analyser)
 
 \begin{frame}{Social aktivitet}
-\only<1>{\mygraph{\gsms\gstem}}
-\only<2>{\mygraph{\gopkald\gstem}}
-\only<3>{\mygraph{\gsms\gopkald}}
-\only<4>{\mygraph{Social}{Stemnings.}}
+\only<1>{\mygraph{\gstem{}}}
+\only<2>{\mygraph{\gsms{}\gstem{}}}
+\only<3>{\mygraph{\gsms{opacity=0.15}\gopkald{}\gstem{}}}
+\only<4>{\mygraph{\gsms{}\gopkald{}\gstem{opacity=0.5}}}
+\only<5>{\mygraph{\gsms{dashed, opacity=0.7}\gopkald{dashed, opacity=0.7}\gsocial{}\gstem{opacity=0.2}}}
+\only<6>{\mygraph{\gsocial{}\gstem{}}}
 \end{frame}
 
 \begin{frame}{Sammenligning med sygdom}
+Kommer det her til at give mening?\\
 \only<1>{\mygraph{Depression}{Patient}}
 \only<2>{\mygraph{Stress}{Patient}}
 \end{frame}
 
 \subsection{Validering}
 \begin{frame}{Indsamling af data}
-Data-kilder bør vurderes på følgende tre kriterier:
+Data-kilder vurderes på følgende tre kriterier:
 \begin{itemize}
 \item Pålidelighed
 \item Præcision
 \item Frekvens
+\end{itemize}\pause
+Begrænsninger i kilder kompenseres ved at kombinere flere:
+\begin{itemize}
+\item Stemningsleje på mobil: Ofte men upræcist
+\item Stemningsleje fra psykolog: Sjældent men præcist
 \end{itemize}
-Begrænsninger i kilder kan kompenseres ved at kombinere flere kilder.
 \end{frame}
 
 \begin{frame}{Stemningsleje og social aktivitet}
@@ -71,7 +88,7 @@ Der findes ingen \textit{ground truth} til validering.
 \begin{itemize}
 \item Indsamlet information kan sammenholdes hermed.
 \item Kontinuert indsamling $\rightarrow$ kontinuert udvikling.
-\end{itemize}
+\end{itemize}\pause
 \item Social aktivitet
 \begin{itemize}
 \item Ingen kendt skala.
@@ -87,16 +104,21 @@ Der findes ingen \textit{ground truth} til validering.
 4 åbne problemstillinger introduceret:
 \begin{itemize}
 \item \textit{Hvordan skal de indsamlede data analyseres?}
-%INGEN ANELSE
-%PAS
-%DUNNO
+\only<2>{\begin{itemize}\item Afhænger af det data der skal undersøges.\end{itemize}}
+
 \item \textit{Hvordan oplyser vi patienten, om de informationer der er i hæftet, på en mobil platform?}
+\only<3>{\begin{itemize}\item Kort guide associeret med hvert spørgsmål.\end{itemize}}
 %VIS HJÆLPE-FUNKTION
+
 \item \textit{Hvordan præsenteres HAM-D på en mobil platform uden en interviewer?}
+\only<4>{\begin{itemize}\item Systemet kan være med til at undersøge om HAM-D kan anvendes uden interviewer.\end{itemize}}
 %DET KAN MAN IKKE :P
 %FORDI SVARET SKAL FORTOLKET (AF FAGFOLK)
+
 \item \textit{Hvornår skal spørgsmål stilles for at få det bedste billede af patientens stemningsleje?}
+\only<5>{\begin{itemize}\item Kort guide associeret med hvert spørgsmål.\end{itemize}}
 %DET ER DET SAMME IGEN
 %SVINGNING I LØBET AF DAGEN
+
 \end{itemize}
 \end{frame}
